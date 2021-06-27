@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
 }
@@ -10,6 +11,9 @@ body {
 
 .skipLink {
   position: "absolute";
+  display: flex;
+  justify-content: center;
+  width: 12%;
   left: -1000px;
   top: 5px;
   z-index: 999;
@@ -20,7 +24,7 @@ body {
 }
 
 .skipLink:focus {
-  left: 0;
+  left: 1%;
 }
 
 .wrapper {
@@ -29,21 +33,23 @@ body {
   margin: 0 auto;
 }
 
-a,
 p,
-input [type=text] {
+input [type=text],
+li {
   font-family: "Roboto", sans-serif;
+  font-size: 2rem;
 }
 
 a {
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
   color: white;
+  font-size: 2.5rem;
 }
 
 p, li {
   line-height: 2.9rem;
   letter-spacing: 0.1rem;
-  font-size: 2rem;
 }
 
 h1,
@@ -339,10 +345,41 @@ header h1 {
   font-size: 14.25rem;
   font-weight: 400;
 }
-@media screen and (max-width: 1980px) {
-  header img {
-    width: 900px;
-    height: 750px;
+@media screen and (max-width: 900px) {
+  header nav {
+    padding-top: 10%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 350px) {
+  header nav {
+    padding-top: 20%;
+    width: 27.5%;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  header ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  header li {
+    font-size: 2.5rem;
+    padding-bottom: 10%;
+  }
+  header nav a:hover::after,
+header nav a:focus::after {
+    content: "";
+    width: 50%;
+    height: 5%;
+    background-color: #08FDED;
+    position: absolute;
+    bottom: 12%;
+  }
+  header .mainH1,
+header .blogH1,
+header .contactH1 {
+    font-size: 6.5rem;
   }
 }
 
@@ -362,6 +399,28 @@ header h1 {
   bottom: -40%;
   margin-bottom: 5%;
 }
+@media screen and (max-width: 900px) {
+  .mainHeader {
+    height: 100vh;
+  }
+  .mainHeader img {
+    width: 50%;
+    height: 50%;
+    bottom: 0;
+    margin-bottom: -10%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .mainHeader {
+    height: 80vh;
+  }
+  .mainHeader img {
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    margin-bottom: -10%;
+  }
+}
 
 .contactHeader {
   background-image: url(/contact-header.711a4f6c.jpg);
@@ -370,12 +429,16 @@ header h1 {
 .contactHeader h1 {
   margin-top: 6%;
 }
+@media screen and (max-width: 350px) {
+  .contactHeader {
+    height: 80vh;
+  }
+}
 
 .blogHeader {
   background-image: url(/blog-header.738885c1.jpg);
   height: 70vh;
 }
-
 .about {
   background: #03697C;
   height: 100vh;
@@ -438,14 +501,37 @@ header h1 {
   width: 80%;
   margin: 0;
 }
-@media screen and (min-width: 1900px) {
+@media screen and (max-width: 900px) {
   .about .aboutContainer {
-    max-width: 1500px;
+    grid-template-columns: 50% 50%;
+    margin-left: 10%;
+  }
+  .about p {
+    margin-bottom: 5%;
   }
 }
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 350px) {
+  .about {
+    height: 200vh;
+    flex-direction: column;
+  }
   .about .aboutContainer {
-    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+  }
+  .about .newSpace,
+.about .blog,
+.about .community,
+.about .getInTouch {
+    width: 90%;
+    margin: 15% 5%;
+  }
+  .about h3,
+.about a {
+    font-size: 3rem;
+  }
+  .about p {
+    font-size: 1.4rem;
   }
 }
 
@@ -455,14 +541,15 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .events .eventsBox {
   width: 300px;
   height: 300px;
   background-color: #08FDED;
-  position: relative;
+  position: absolute;
   left: 8%;
-  bottom: -3%;
+  bottom: 21%;
 }
 .events img {
   width: 300px;
@@ -472,9 +559,8 @@ header h1 {
 }
 .events .eventsContainer {
   width: 60%;
-}
-.events h3 {
-  font-size: 4.5rem;
+  position: absolute;
+  right: 8%;
 }
 .events p {
   font-size: 2rem;
@@ -487,12 +573,55 @@ header h1 {
   font-family: "Walter Turncoat", cursive;
   background: #08FDED;
   color: #474BB5;
-  padding: 0.5% 1%;
+  padding: 0.5% 2%;
 }
 .events a:hover,
 .events a:focus {
-  background: #474BB5;
-  color: #08FDED;
+  background: #F3FAFF;
+  color: #474BB5;
+}
+@media screen and (max-width: 900px) {
+  .events .eventsBox,
+.events img {
+    width: 270px;
+    height: 270px;
+  }
+  .events .eventsBox {
+    left: 7%;
+    bottom: 24%;
+  }
+  .events .eventsContainer {
+    width: 50%;
+  }
+  .events p {
+    font-size: 1.4rem;
+    margin-top: 7%;
+    margin-bottom: 5%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .events {
+    height: 110vh;
+    flex-direction: column;
+  }
+  .events .eventsBox {
+    left: 2%;
+    top: 5%;
+  }
+  .events img {
+    top: 4%;
+    left: 5%;
+  }
+  .events .eventsContainer {
+    width: 90%;
+    top: 40%;
+    left: 5%;
+  }
+  .events p {
+    font-size: 1.4rem;
+    margin-top: 7%;
+    margin-bottom: 5%;
+  }
 }
 
 .gallery {
@@ -506,6 +635,18 @@ header h1 {
   width: 450px;
   height: 450px;
 }
+@media screen and (max-width: 900px) {
+  .gallery img {
+    width: 270px;
+    height: 270px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .gallery {
+    height: 110vh;
+    flex-direction: column;
+  }
+}
 
 .roadTrip {
   height: 65vh;
@@ -514,10 +655,6 @@ header h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.roadTrip h3 {
-  font-size: 4.5rem;
-  line-height: 9.98rem;
 }
 .roadTrip p {
   font-size: 2rem;
@@ -530,12 +667,28 @@ header h1 {
   font-family: "Walter Turncoat", cursive;
   background: #08FDED;
   color: #474BB5;
-  padding: 0.5% 1%;
+  padding: 0.5% 2%;
 }
 .roadTrip a:hover,
 .roadTrip a:focus {
-  background: #474BB5;
-  color: #08FDED;
+  background: #F3FAFF;
+  color: #474BB5;
+}
+@media screen and (max-width: 900px) {
+  .roadTrip {
+    height: 80vh;
+    text-align: center;
+  }
+  .roadTrip p {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .roadTrip p {
+    font-size: 1.6rem;
+    margin-bottom: 10%;
+  }
 }
 
 .stream {
@@ -548,49 +701,197 @@ header h1 {
 .services {
   height: 100vh;
   background: #474BB5;
+  display: flex;
+  position: relative;
 }
-.services .smile {
-  grid-area: smile;
+.services .leftSide,
+.services .rightSide {
+  display: flex;
+  flex-direction: column;
 }
-.services .programs {
-  grid-area: programs;
+.services .leftSide img,
+.services .rightSide img {
+  width: 837.5px;
+  height: 523.75px;
 }
-.services .locations {
-  grid-area: locations;
+.services .leftSide {
+  width: 45%;
+  margin-right: auto;
 }
-.services .toy {
-  grid-area: toy;
+.services .rightSide {
+  width: 45%;
+  margin-left: auto;
 }
-.services .servicesContainer {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 47% 6% 47%;
-  grid-template-areas: "smile . programs" "locations . toy";
-}
-.services a,
-.services h3 {
+.services a {
   display: flex;
   margin: 0;
-  font-size: 4.5rem;
   font-family: "Walter Turncoat", cursive;
 }
 .services a {
   background: #08FDED;
   color: #474BB5;
-  width: 27.5%;
+  width: 25%;
   display: flex;
   justify-content: center;
   padding: 0.5% 1%;
 }
+.services a:hover,
+.services a:focus {
+  background: #F3FAFF;
+}
 .services p {
   font-size: 2rem;
-  margin: 0;
-  width: 75%;
+  width: 85%;
+}
+.services .leftBox,
+.services .rightBox {
+  width: 837.5px;
+  height: 523.75px;
+  background: #08FDED;
+  position: absolute;
+}
+.services .leftBox {
+  top: -5%;
+  left: 1.5%;
+}
+.services .smile {
+  position: absolute;
+  top: -7%;
 }
 .services .locations {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  align-items: flex-end;
+  padding-top: 10%;
+  width: 49%;
+  position: absolute;
+  bottom: 15%;
+}
+.services .programs {
+  padding: 10% 0;
+  position: absolute;
+}
+.services .rightBox {
+  bottom: -10%;
+  right: 1.5%;
+}
+.services .toy {
+  position: absolute;
+  bottom: -7.5%;
+  right: 0;
+}
+@media screen and (max-width: 900px) {
+  .services {
+    height: 150vh;
+    flex-direction: column;
+  }
+  .services .leftSide,
+.services .rightSide {
+    display: flex;
+    flex-direction: column;
+  }
+  .services .leftSide img,
+.services .rightSide img {
+    width: 670px;
+    height: 419px;
+  }
+  .services .leftSide {
+    width: 100%;
+    margin-right: 0;
+  }
+  .services .rightSide {
+    width: 100%;
+    margin-left: 0;
+  }
+  .services .leftBox,
+.services .rightBox {
+    width: 670px;
+    height: 419px;
+  }
+  .services .leftBox {
+    top: -6%;
+    left: 1.5%;
+  }
+  .services .smile {
+    position: absolute;
+    top: -7%;
+  }
+  .services .locations {
+    align-items: center;
+    width: 100%;
+    top: 25%;
+  }
+  .services .programs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    top: 50%;
+  }
+  .services .rightBox {
+    bottom: -10%;
+    right: 1.5%;
+  }
+  .services .toy {
+    position: absolute;
+    bottom: -9%;
+    right: 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  .services {
+    height: 150vh;
+    flex-direction: column;
+  }
+  .services .leftSide,
+.services .rightSide {
+    display: flex;
+    flex-direction: column;
+  }
+  .services .leftSide .smile,
+.services .leftSide .leftBox,
+.services .rightSide .smile,
+.services .rightSide .leftBox {
+    width: 335px;
+    height: 209.5px;
+  }
+  .services .leftSide .toy,
+.services .leftSide .rightBox,
+.services .rightSide .toy,
+.services .rightSide .rightBox {
+    width: 284.75px;
+    height: 178.075px;
+  }
+  .services .leftSide {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .services .rightSide {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .services .leftBox {
+    top: -6.5%;
+  }
+  .services .locations {
+    width: 90%;
+    top: 10%;
+  }
+  .services .programs {
+    width: 90%;
+    top: 50%;
+  }
+  .services .rightBox {
+    bottom: -6.5%;
+    right: 2%;
+  }
+  .services .toy {
+    bottom: -7%;
+    right: 0;
+  }
+  .services a {
+    width: 60%;
+  }
 }
 
 footer {
@@ -602,7 +903,6 @@ footer {
   justify-content: center;
   background: #044779;
 }
-
 .contactInfo {
   background: #03697C;
   display: flex;
@@ -690,12 +990,180 @@ footer {
   top: -25%;
 }
 
-body {
+.blogPost {
   background: #03697C;
 }
-
-.missionHeader {
-  font-size: 4rem;
+.blogPost .blogContainer {
+  position: relative;
+  display: flex;
+  height: 150vh;
+}
+.blogPost .mission {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.blogPost .mission .missionHeader {
+  font-size: 3rem;
+  font-weight: 400;
+}
+.blogPost .mission .missionInfo {
+  background: #474BB5;
+  width: 25%;
+  position: absolute;
+  top: 13%;
+  left: 3%;
+  padding: 25% 1.5% 1.5% 1.5%;
+}
+.blogPost .mission .missionInfo .recent {
+  padding-top: 10%;
+}
+.blogPost .mission .missionInfo ul {
+  list-style: none;
+}
+.blogPost .mission .missionInfo li {
+  line-height: 3.5rem;
+}
+.blogPost .mission .missionInfo ul li::before {
+  content: "•";
+  color: #08FDED;
+  font-weight: bold;
+  display: inline-block;
+  width: 2rem;
+  margin-left: -10%;
+}
+.blogPost .mission img {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: 10%;
+}
+.blogPost .activities {
+  width: 60%;
+}
+.blogPost .activities .blogBox,
+.blogPost .activities img {
+  width: 1104.185px;
+  height: 655.785px;
+}
+.blogPost .activities .blogBox {
+  background-color: #08FDED;
+  position: absolute;
+  right: 2%;
+  top: -9%;
+}
+.blogPost .activities img {
+  position: absolute;
+  right: 0;
+  top: -12%;
+}
+.blogPost .activities .activitiesPost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50% 15% 5% 15%;
+  border-bottom: 5px solid #08FDED;
+  border-left: 5px solid #08FDED;
+}
+.blogPost .comments {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 120vh;
+}
+.blogPost .comments h3 {
+  position: absolute;
+  margin-left: 43%;
+}
+.blogPost .comments .commentBody {
+  display: flex;
+  flex-direction: column;
+}
+.blogPost .comments .mariama,
+.blogPost .comments .rob {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-left: 43%;
+  margin-right: 5%;
+}
+.blogPost .comments .mariama img,
+.blogPost .comments .rob img {
+  width: 100px;
+  height: 100px;
+  margin-right: 5%;
+}
+.blogPost .comments .mariama {
+  top: 5%;
+}
+.blogPost .comments .rob {
+  top: 25%;
+}
+.blogPost .comments .comment {
+  font-weight: bold;
+  font-style: italic;
+}
+.blogPost .comments form,
+.blogPost .comments input,
+.blogPost .comments textarea {
+  color: #F3FAFF;
+  font-size: 2rem;
+  background: #03697C;
+}
+.blogPost .comments form,
+.blogPost .comments input {
+  border: none;
+  border-bottom: 1px solid #F3FAFF;
+}
+.blogPost .comments form {
+  padding: 2% 4%;
+  position: absolute;
+  right: 0.5%;
+  bottom: 5%;
+}
+.blogPost .comments .top-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+.blogPost .comments input[type=text],
+.blogPost .comments input[type=email] {
+  width: 430px;
+  padding-bottom: 3.5%;
+  padding-left: 5%;
+}
+.blogPost .comments input[type=text]:hover,
+.blogPost .comments input[type=text]:focus,
+.blogPost .comments input[type=email]:hover,
+.blogPost .comments input[type=email]:focus,
+.blogPost .comments textarea[type=message]:hover,
+.blogPost .comments textarea[type=message]:focus {
+  border-bottom: 5px solid white;
+}
+.blogPost .comments textarea[type=message] {
+  width: 900px;
+  padding-top: 2.5%;
+  padding-left: 2.5%;
+  border: 1px solid #08FDED;
+  resize: none;
+}
+.blogPost .comments input[type=submit] {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  width: 900px;
+  background: #08FDED;
+  color: #044779;
+  padding: 10px 50px;
+}
+.blogPost .comments input[type=submit]:hover,
+.blogPost .comments input[type=submit]:focus {
+  background-color: white;
+  color: #474BB5;
+}
+.blogPost .comments input:invalid,
+.blogPost .comments textarea:invalid {
+  border-bottom: 5px solid #08FDED;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

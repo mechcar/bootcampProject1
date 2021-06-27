@@ -4,6 +4,10 @@ $grey: #F3FAFF;
 $aqua: #08FDED;
 $turquoise: #03697C;
 
+$small: 350px;
+$medium: 900px;
+$large: 1480px;
+
 html {
     font-size: 62.5%;
 }
@@ -16,6 +20,9 @@ body {
 
 .skipLink {
     position: 'absolute';
+    display: flex;
+    justify-content: center;
+    width: 12%;
     left: -1000px;
     top: 5px;
     z-index: 999;
@@ -26,7 +33,7 @@ body {
 }
 
 .skipLink:focus {   
-    left: 0;
+    left: 1%;
 }
 
 .wrapper {
@@ -35,21 +42,23 @@ body {
     margin: 0 auto;
 }
 
-a,
 p,
-input [type='text'] {
+input [type='text'],
+li {
     font-family: "Roboto", sans-serif;
+    font-size: 2rem;
 }
 
 a {
+    font-family: "Roboto", sans-serif;
     text-decoration: none;
-    color: white
+    color: white;
+    font-size: 2.5rem;    
 }
 
 p, li {
     line-height: 2.9rem;
     letter-spacing: 0.1rem;
-    font-size: 2rem;
 }
 
 h1,

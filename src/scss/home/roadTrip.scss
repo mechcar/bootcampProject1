@@ -6,11 +6,6 @@
     align-items: center;
     justify-content: center;
 
-    h3 {
-        font-size: 4.5rem;
-        line-height: 9.98rem;
-    }
-
     p {
         font-size: 2rem;
         line-height: 2.8rem;
@@ -23,13 +18,31 @@
         font-family: "Walter Turncoat", cursive;
         background: $aqua;
         color: $blue;
-        padding: 0.5% 1%;
+        padding: 0.5% 2%;
     }
 
     a:hover,
     a:focus {
-        background: $blue;
-        color: $aqua;
+        background: $grey;
+        color: $blue;
+    }
+
+    @media screen and (max-width: $medium) {
+        height: 80vh;
+        text-align: center;
+
+        p {
+            width: 90%;
+            margin-bottom: 5%;
+        }
+    }
+
+    @media screen and (max-width: $small) {
+
+        p {
+            font-size: 1.6rem;
+            margin-bottom: 10%;
+        }
     }
 }
 

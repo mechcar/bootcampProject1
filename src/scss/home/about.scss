@@ -72,18 +72,42 @@
         margin: 0;
     }
 
-    @media screen and (min-width: 1900px) {
+    @media screen and (max-width: $medium) {
         .aboutContainer {
-            max-width: 1500px;
+            grid-template-columns: 50% 50%;
+            margin-left: 10%;
         }
-        
+
+        p {
+            margin-bottom: 5%;
+        }
     }
 
-    @media screen and (max-width: 1480px) {
+    @media screen and (max-width: $small) {
+        height: 200vh;
+        flex-direction: column;
+
         .aboutContainer {
-            max-width: 1080px;
+            display: flex;
+            flex-direction: column;
         }
-        
+    
+        .newSpace,
+        .blog,
+        .community,
+        .getInTouch {
+            width: 90%;
+            margin: 15% 5%;
+        }
+
+        h3,
+        a {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
     }
 
 }

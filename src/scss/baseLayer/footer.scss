@@ -6,4 +6,16 @@ footer {
     align-items: center;
     justify-content: center;
     background: $darkBlue;
+
+    @media screen and (max-width: $large) {
+        
+    }
+
+    @media screen and (max-width: $medium) {
+        
+    }
+
+    @media screen and (max-width: $small) {
+        
+    }
 }

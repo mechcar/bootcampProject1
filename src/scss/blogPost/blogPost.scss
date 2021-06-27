@@ -1,7 +1,222 @@
-body {
+.blogPost {
     background: $turquoise;
-}
 
-.missionHeader {
-    font-size: 4rem;
+    .blogContainer {
+        position: relative;
+        display: flex;
+        height: 150vh;
+    }
+            
+    .mission {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        
+        .missionHeader {
+            font-size: 3rem;
+            font-weight: 400;
+        }
+        
+        .missionInfo {
+            background: $blue;
+            width: 25%;
+            position: absolute;
+            top: 13%;
+            left: 3%;
+            padding: 25% 1.5% 1.5% 1.5%;
+        
+            .recent{
+                padding-top: 10%;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            li {
+                line-height: 3.5rem;
+            }
+
+            ul li::before {
+                content: "\2022";
+                color: $aqua;
+                font-weight: bold;
+                display: inline-block; 
+                width: 2rem;
+                margin-left: -10%;
+            }
+        }
+
+        
+        img {
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            top: 10%;
+        }
+    }
+
+    
+    
+    .activities {
+        width: 60%;
+        
+        .blogBox,
+        img {
+            width: 985px * 1.121;
+            height: 585px * 1.121;
+        }
+        
+        .blogBox {
+            background-color: $aqua;
+            position: absolute;
+            right: 2%;
+            top: -9%;
+        }
+        
+        img {
+            position: absolute;
+            right: 0;
+            top: -12%;
+        }
+        
+        .activitiesPost {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50% 15% 5% 15%;
+            border-bottom: 5px solid $aqua;
+            border-left: 5px solid $aqua;
+        }
+    }
+    
+    .comments {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 120vh;
+
+        h3 {
+            position: absolute;
+            margin-left: 43%;
+        }
+
+        .commentBody {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mariama,
+        .rob {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            margin-left: 43%;
+            margin-right: 5%;
+
+            img {
+                width: 100px;
+                height: 100px;
+                margin-right: 5%;
+            }
+        }
+
+        .mariama {
+            top: 5%;
+        }
+
+        .rob {
+            top: 25%;
+        }
+
+        .comment {
+            font-weight: bold;
+            font-style: italic;
+        }
+        
+        form,
+        input,
+        textarea {
+            color: $grey;
+            font-size: 2rem;
+            background: $turquoise;
+        }
+        
+        form,
+        input {
+            border: none;
+            border-bottom: 1px solid $grey;
+        }
+        
+        form {
+            padding: 2% 4%;
+            position: absolute;
+            right: 0.5%;
+            bottom: 5%;
+        }
+        
+        .top-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5%;
+        }
+        
+        input[type='text'],
+        input[type='email'] {
+            width: 430px;
+            padding-bottom: 3.5%;
+            padding-left: 5%;
+        }
+        
+        input[type='text']:hover,
+        input[type='text']:focus,
+        input[type='email']:hover,
+        input[type='email']:focus,
+        textarea[type='message']:hover,
+        textarea[type='message']:focus {
+            border-bottom: 5px solid white;
+        }
+        
+        textarea[type='message'] {
+            width: 900px;
+            padding-top: 2.5%;
+            padding-left: 2.5%;
+            border: 1px solid $aqua;
+            resize: none;
+        }
+        
+        input[type="submit"] {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            width: 900px;
+            background: $aqua;
+            color: $darkBlue;
+            padding: 10px 50px;
+        }
+        
+        input[type="submit"]:hover,
+        input[type="submit"]:focus {
+            background-color: white;
+            color: $blue;
+        }
+        
+        input:invalid,
+        textarea:invalid {
+            border-bottom: 5px solid $aqua;
+        }
+    }
+
+    
+    @media screen and (max-width: $large) {
+        
+    }
+
+    @media screen and (max-width: $medium) {
+        
+    }
+
+    @media screen and (max-width: $small) {
+        
+    }
 }
