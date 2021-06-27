@@ -1,0 +1,41 @@
+.roadTrip {
+    height: 65vh;
+    background: $turquoise;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+        font-size: 4.5rem;
+        line-height: 9.98rem;
+    }
+
+    p {
+        font-size: 2rem;
+        line-height: 2.8rem;
+        letter-spacing: 0.1rem;
+        width: 60%;
+    }
+
+    a {
+        font-size: 3rem;
+        font-family: "Walter Turncoat", cursive;
+        background: $aqua;
+        color: $blue;
+        padding: 0.5% 1%;
+    }
+
+    a:hover,
+    a:focus {
+        background: $blue;
+        color: $aqua;
+    }
+}
+
+.stream {
+    height: 60vh;
+    background-image: url(/funplace-assets/banner.jpg);
+    background-position: center;
+    background-size: cover;
+}

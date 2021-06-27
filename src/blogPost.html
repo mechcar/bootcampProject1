@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Place - Blog</title>
+    
+    <link rel="stylesheet" href="/scss/main.scss">
+
+    <!-- Walter Turncoat Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet"> 
+
+    <!-- Roboto Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <header class="blogHeader">
+        <!-- <div class="skipLink"></div> -->
+        <div class="wrapper">
+            <nav class='blogNav'>
+                <ul>
+                    <a href="/index.html"><li>Home</li></a>
+                    <a href="/index.html"><li>About</li></a>
+                    <a href="#"><li>Blog</li></a>
+                    <a href="/contact.html"><li>Contact</li></a>
+                </ul>
+            </nav>
+    
+            <h1 class='blogH1'>Blog</h1>
+        </div>
+    </header>
+
+    <section class="mission">
+        <img src="/funplace-assets/blog-side-image.jpg" alt="">
+        <div class="missionInfo">
+            <h3 class="missionHeader">Our Mission</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque ratione ea, aperiam aspernatur eaque autem?</p>
+
+            <h3 class="missionHeader">Recent Posts</h3>
+            <ul class="recentPosts">
+                <li><a href="">Lorem ipsum dolor sit</a></li>
+                <li><a href="">Lorem ipsum dolor sit</a></li>
+                <li><a href="">Lorem ipsum dolor sit</a></li>
+                <li><a href="">Lorem ipsum dolor sit</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="activities">
+        <div class="blogBox"></div>
+        <img src="/funplace-assets/blog-post-imag.jpg" alt="Young girl playing with bubbles">
+
+        <div class="activitiesPost">
+            <h3>New Activities</h3>
+            <p>Monday January 30, 2019 by Saron</p>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, at blanditiis. Ducimus, reiciendis voluptate cum iusto iste quibusdam ipsum voluptas recusandae dolore saepe eligendi quas in voluptatem a excepturi nisi.
+            </p>
+            
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid est ipsam tenetur minus necessitatibus harum aspernatur. Aspernatur quam omnis distinctio dicta ea praesentium debitis optio sapiente ex esse ipsum, molestiae excepturi incidunt eligendi, modi eum eos est nam reprehenderit aperiam.
+            </p>
+            
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur consectetur, eligendi saepe eveniet ipsa deleniti iure facere dolor debitis harum impedit tenetur nisi dignissimos, quaerat placeat dicta officia sequi! Maiores ipsa quia placeat vero id, quasi, quam numquam a perferendis quisquam repellat reprehenderit assumenda temporibus.
+            </p>
+            
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia soluta distinctio dignissimos sequi eius mollitia hic officia vitae officiis nulla.
+            </p>
+        </div>
+    </section>
+
+    <section class="comments">
+        <h3>Comments:</h3>
+        <div class="mariama">
+            <img src="/funplace-assets/comment-1.jpg" alt="Woman smiling">
+            <p class="comment">Tuesday October 9th, 2019 by Mariama</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio enim, vel nostrum nulla vitae illo voluptate quas quisquam id ducimus, omnis repellendus asperiores pariatur incidunt aut nemo nisi aliquam accusamus.</p>
+        </div>
+
+        <div class="rob">
+            <img src="/funplace-assets/comment-2.jpg" alt="Man smiling">
+            <p class="comment">Wednesday October 10th, 2019 by Rob</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reprehenderit quibusdam quia quasi ipsa est sunt nobis suscipit autem, consequuntur quod quas perferendis ipsum delectus.</p>
+        </div>
+
+        <form action="/blogPost.html">
+            <div class="top-row">
+                <div class="name">
+                    <label for="name" id="name" name="name"></label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>   
+                </div>
+                
+                <div class="email">
+                    <label for="email" id="email" name="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>    
+                </div>
+            </div>
+            
+            <div class="message">
+                <label for="message" id="message" name="message"></label>
+                <textarea type="message" id="message" cols="40" rows="10" placeholder="Comment" required maxlength="500"></textarea>
+
+                <label for="submit" id="submit" name="submit"></label>
+                <input type="submit" id="submit" name="submit" value="Post Comment">
+            </div>
+        </form>
+    </section>
+
+</body>
+</html>

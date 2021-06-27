@@ -1,0 +1,102 @@
+.contactInfo {
+    background: $turquoise;
+    display: flex;
+    position: relative;
+    height: 50vh;
+
+    .contactDetails {
+        margin: auto 0 auto 12%;
+        font-size: 2rem;
+
+        p {
+            margin: 0;
+            line-height: 2.8rem;
+        }
+
+        :nth-child(3){
+            margin-top: 2rem;
+        }
+    }
+
+
+    form,
+    input,
+    textarea {
+        color: $grey;
+        font-size: 2rem;
+        background: $blue;
+    }
+    
+    form,
+    input {
+        border: none;
+        border-bottom: 1px solid $grey;
+    }
+
+    form {
+        padding: 2% 4%;
+        position: absolute;
+        right: 5%;
+        top: -30%;
+    }
+
+    .top-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5%;
+    }
+
+    input[type='text'],
+    input[type='email'] {
+        width: 430px;
+        padding-bottom: 3.5%;
+        padding-left: 5%;
+    }
+
+    input[type='text']:hover,
+    input[type='text']:focus,
+    input[type='email']:hover,
+    input[type='email']:focus,
+    textarea[type='message']:hover,
+    textarea[type='message']:focus {
+        border-bottom: 5px solid white;
+    }
+
+    textarea[type='message'] {
+        width: 900px;
+        padding-top: 2.5%;
+        padding-left: 2.5%;
+        resize: none;
+    }
+    
+    input[type="submit"] {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        width: 900px;
+        background: $aqua;
+        color: $darkBlue;
+        padding: 10px 50px;
+    }
+    
+    input[type="submit"]:hover,
+    input[type="submit"]:focus {
+        background-color: white;
+        color: $blue;
+    }
+    
+    input:invalid,
+    textarea:invalid {
+        border-bottom: 5px solid $aqua;
+    }
+
+    .formBox {
+        width: 1000px;
+        height: 520px;
+        background-color: $aqua;
+        position: absolute;
+        right: 4%;
+        top: -25%
+    }
+
+}

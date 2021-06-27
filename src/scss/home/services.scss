@@ -1,0 +1,59 @@
+.services {
+    height: 100vh;
+    background: $blue;
+
+    .smile {
+        grid-area: smile;
+    }
+
+    .programs {
+        grid-area: programs;
+    }
+
+    .locations {
+        grid-area: locations;
+    }
+
+    .toy {
+        grid-area: toy;
+    }
+
+    .servicesContainer {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 47% 6% 47%;
+        grid-template-areas:
+            "smile . programs"
+            "locations . toy";
+    }
+
+    a, 
+    h3 {
+        display: flex;
+        margin: 0;
+        font-size: 4.5rem;
+        font-family: "Walter Turncoat", cursive;
+    }
+
+    a {
+        background: $aqua;
+        color: $blue;
+        width: 27.5%;
+        display: flex;
+        justify-content: center;
+        padding: 0.5% 1%;
+    }
+
+    p {
+        font-size: 2rem;
+        margin: 0;
+        width: 75%;
+    }
+
+    .locations {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+}

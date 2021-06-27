@@ -1,0 +1,77 @@
+$blue: #474BB5;
+$darkBlue: #044779;
+$grey: #F3FAFF;
+$aqua: #08FDED;
+$turquoise: #03697C;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: white;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.skipLink {
+    position: 'absolute';
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Roboto', cursive;
+    border: 0.4rem solid #e85b26;
+}
+
+.skipLink:focus {   
+    left: 0;
+}
+
+.wrapper {
+    max-width: 1480px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+a,
+p,
+input [type='text'] {
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+p, li {
+    line-height: 2.9rem;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+button,
+input[type="submit"] {
+    font-family: 'Walter Turncoat', cursive;
+    margin: 0;
+}
+
+.mainH1 {
+    font-size: 14.25rem;
+}
+
+.contactH1,
+.blogH1 {
+    font-size: 12.15rem;
+}
+
+h3 {
+    font-size: 4.5rem;
+}
+
+

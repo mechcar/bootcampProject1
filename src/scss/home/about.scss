@@ -1,0 +1,89 @@
+.about {
+    background: $turquoise;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    
+    .aboutContainer {
+        display: grid;
+        grid-template-rows: 45% 45%;
+        grid-template-columns: 60% 60%;
+    }
+
+    .newSpace,
+    .blog,
+    .community,
+    .getInTouch {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h3 {
+        display: flex;
+        align-items: center;
+    }
+
+    h3::before {
+        margin-left: -9.5%;
+    }
+
+    .newSpace h3::before {
+        content: url(\funplace-assets/aboutAssets/home.png);
+    }
+
+    .blog h3::before {
+        content: url(\funplace-assets/aboutAssets/blog.png);
+    }
+
+    .community h3::before {
+        content: url(\funplace-assets/aboutAssets/community.png);
+    }
+
+    .getInTouch h3::before {
+        content: url(\funplace-assets/aboutAssets/phone.png);
+    }
+    
+    a, 
+    h3 {
+        display: flex;
+        margin: 0;
+        font-size: 4.5rem;
+        font-family: "Walter Turncoat", cursive;
+    }
+
+    a {
+        position: relative;
+    }
+
+    a:hover::after,
+    a:focus::after {
+        content: '';
+        width: 100%;
+        height: 10%;
+        background-color: $aqua;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+    }
+
+    p {
+        font-size: 2rem;
+        width: 80%;
+        margin: 0;
+    }
+
+    @media screen and (min-width: 1900px) {
+        .aboutContainer {
+            max-width: 1500px;
+        }
+        
+    }
+
+    @media screen and (max-width: 1480px) {
+        .aboutContainer {
+            max-width: 1080px;
+        }
+        
+    }
+
+}
