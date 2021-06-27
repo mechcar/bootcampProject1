@@ -171,7 +171,7 @@
     }
 
     @media screen and (max-width: $small) {
-        height: 150vh;
+        height: 120vh;
         flex-direction: column;
 
         .leftSide,
@@ -205,12 +205,12 @@
 
 
         .leftBox {
-            top: -6.5%;
+            top: -6%;
         }
         
         .locations {
             width: 90%;
-            top: 10%;
+            top: 12.5%;
         }
         
         .programs {
@@ -219,8 +219,8 @@
         }
         
         .rightBox {
-            bottom: -6.5%;
-            right: 2%;
+            bottom: -6%;
+            right: 2.5%;
         }
 
         .toy {

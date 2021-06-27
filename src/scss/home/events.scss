@@ -74,29 +74,30 @@
     }
 
     @media screen and (max-width: $small) {
-        height: 110vh;
+        height: 100vh;
         flex-direction: column;
+        text-align: center;
 
         .eventsBox {
-            left: 2%;
+            left: 9%;
             top: 5%;
         }
     
         img {
             top: 4%;
-            left: 5%;
+            left: 12%;
         }
     
         .eventsContainer {
             width: 90%;
             top: 40%;
-            left: 5%;
+            left: 7%;
         }
     
         p {
             font-size: 1.4rem;
             margin-top: 7%;
-            margin-bottom: 5%;
+            margin-bottom: 10%;
         }
     }
 }
