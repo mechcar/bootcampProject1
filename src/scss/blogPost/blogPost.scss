@@ -311,7 +311,7 @@
     
     @media screen and (max-width: $small) {
         .blogContainer {
-            height: 320vh;
+            height: 380vh;
             flex-direction: column;
         }
                 
@@ -343,8 +343,6 @@
             }
         }
     
-        
-        
         .activities {
             width: 90%;
             
@@ -377,7 +375,7 @@
         }
         
         .comments {
-            height: 200vh;
+            height: 240vh;
     
             h3 {
                 margin-left: 10%;

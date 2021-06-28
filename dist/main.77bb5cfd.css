@@ -420,8 +420,9 @@ header .contactH1 {
     height: 60vh;
   }
   .mainHeader .mainH1 {
-    font-size: 10rem;
-    margin: 12.5%;
+    font-size: 8rem;
+    margin: 5%;
+    line-height: 7.5rem;
   }
   .mainHeader img {
     display: none;
@@ -445,10 +446,11 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .contactHeader {
-    height: 40vh;
+    height: 50vh;
   }
   .contactHeader h1 {
-    margin-top: 15%;
+    width: 80%;
+    margin-top: 5%;
   }
 }
 
@@ -464,7 +466,7 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .blogHeader {
-    height: 30vh;
+    height: 40vh;
     background-size: 100% 100%;
   }
   .blogHeader h1 {
@@ -545,7 +547,7 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .about {
-    height: 190vh;
+    height: 225vh;
     flex-direction: column;
   }
   .about .aboutContainer {
@@ -636,7 +638,7 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .events {
-    height: 120vh;
+    height: 140vh;
     flex-direction: column;
     text-align: center;
   }
@@ -679,7 +681,7 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .gallery {
-    height: 140vh;
+    height: 150vh;
     flex-direction: column;
   }
 }
@@ -721,7 +723,7 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .roadTrip {
-    height: 90vh;
+    height: 100vh;
   }
   .roadTrip p {
     font-size: 1.6rem;
@@ -886,7 +888,7 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .services {
-    height: 125vh;
+    height: 155vh;
     flex-direction: column;
   }
   .services .leftSide,
@@ -1081,7 +1083,7 @@ footer {
 }
 @media screen and (max-width: 425px) {
   .contactInfo {
-    height: 120vh;
+    height: 140vh;
   }
   .contactInfo .contactDetails {
     margin: 0 auto;
@@ -1116,7 +1118,7 @@ footer {
     height: 416px;
     background-color: #08FDED;
     position: absolute;
-    right: 3.5%;
+    right: 2.5%;
     top: 36.5%;
   }
 }
@@ -1375,7 +1377,7 @@ footer {
 }
 @media screen and (max-width: 425px) {
   .blogPost .blogContainer {
-    height: 320vh;
+    height: 380vh;
     flex-direction: column;
   }
   .blogPost .mission {
@@ -1424,7 +1426,7 @@ footer {
     font-size: 1.4rem;
   }
   .blogPost .comments {
-    height: 200vh;
+    height: 240vh;
   }
   .blogPost .comments h3 {
     margin-left: 10%;
