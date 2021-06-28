@@ -45,6 +45,7 @@ a {
   text-decoration: none;
   color: white;
   font-size: 2.5rem;
+  padding: 1% 2%;
 }
 
 p, li {
@@ -331,6 +332,7 @@ header li {
 header a {
   color: white;
   position: relative;
+  padding: 0;
 }
 header nav a:hover::after,
 header nav a:focus::after {
@@ -351,10 +353,11 @@ header h1 {
     width: 50%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   header nav {
     padding-top: 15%;
     width: 90%;
+    margin: 0 auto;
   }
   header ul {
     display: flex;
@@ -363,16 +366,16 @@ header h1 {
   }
   header li {
     font-size: 2rem;
-    padding-bottom: 5%;
+    padding-bottom: 20%;
   }
   header nav a:hover::after,
 header nav a:focus::after {
     content: "";
-    width: 25%;
+    width: 100%;
     height: 5%;
     background-color: #08FDED;
     position: absolute;
-    bottom: 12%;
+    bottom: 35%;
   }
   header .mainH1,
 header .blogH1,
@@ -411,19 +414,17 @@ header .contactH1 {
     margin-bottom: -10%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .mainHeader {
-    height: 80vh;
+    background-size: 100% 100%;
+    height: 60vh;
   }
   .mainHeader .mainH1 {
     font-size: 10rem;
     margin: 12.5%;
   }
   .mainHeader img {
-    width: 80%;
-    height: 40%;
-    bottom: -2.5%;
-    margin-bottom: -10%;
+    display: none;
   }
   .mainHeader .hidden {
     display: flex;
@@ -432,14 +433,22 @@ header .contactH1 {
 
 .contactHeader {
   background-image: url(/contact-header.711a4f6c.jpg);
-  height: 70vh;
+  height: 50vh;
 }
 .contactHeader h1 {
   margin-top: 6%;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 900px) {
+  .contactHeader h1 {
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 425px) {
   .contactHeader {
-    height: 80vh;
+    height: 40vh;
+  }
+  .contactHeader h1 {
+    margin-top: 15%;
   }
 }
 
@@ -447,6 +456,19 @@ header .contactH1 {
   background-image: url(/blog-header.738885c1.jpg);
   height: 70vh;
 }
+@media screen and (max-width: 900px) {
+  .blogHeader {
+    height: 65vh;
+    background-size: 100% 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .blogHeader {
+    height: 30vh;
+    background-size: 100% 100%;
+  }
+}
+
 .about {
   background: #03697C;
   height: 100vh;
@@ -518,9 +540,9 @@ header .contactH1 {
     margin-bottom: 5%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .about {
-    height: 175vh;
+    height: 160vh;
     flex-direction: column;
   }
   .about .aboutContainer {
@@ -535,7 +557,7 @@ header .contactH1 {
     margin: 5%;
   }
   .about .newSpace {
-    margin-top: 22.5%;
+    margin-top: 12.5%;
   }
   .about h3,
 .about a {
@@ -584,7 +606,6 @@ header .contactH1 {
   font-family: "Walter Turncoat", cursive;
   background: #08FDED;
   color: #474BB5;
-  padding: 0.5% 2%;
 }
 .events a:hover,
 .events a:focus {
@@ -610,7 +631,7 @@ header .contactH1 {
     margin-bottom: 5%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .events {
     height: 100vh;
     flex-direction: column;
@@ -653,7 +674,7 @@ header .contactH1 {
     height: 270px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .gallery {
     height: 110vh;
     flex-direction: column;
@@ -679,7 +700,6 @@ header .contactH1 {
   font-family: "Walter Turncoat", cursive;
   background: #08FDED;
   color: #474BB5;
-  padding: 0.5% 2%;
 }
 .roadTrip a:hover,
 .roadTrip a:focus {
@@ -696,13 +716,16 @@ header .contactH1 {
     margin-bottom: 5%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .roadTrip {
-    height: 70vh;
+    height: 80vh;
   }
   .roadTrip p {
     font-size: 1.6rem;
     margin-bottom: 10%;
+  }
+  .roadTrip a {
+    width: 90%;
   }
 }
 
@@ -853,9 +876,9 @@ header .contactH1 {
     right: 0;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .services {
-    height: 120vh;
+    height: 110vh;
     flex-direction: column;
   }
   .services .leftSide,
@@ -890,7 +913,7 @@ header .contactH1 {
   }
   .services .locations {
     width: 90%;
-    top: 12.5%;
+    top: 15%;
   }
   .services .programs {
     width: 90%;
@@ -905,7 +928,13 @@ header .contactH1 {
     right: 0;
   }
   .services a {
-    width: 60%;
+    width: 90%;
+  }
+  .services h3 {
+    font-size: 3rem;
+  }
+  .services p {
+    font-size: 1.4rem;
   }
 }
 
@@ -1004,6 +1033,85 @@ footer {
   right: 4%;
   top: -25%;
 }
+@media screen and (max-width: 900px) {
+  .contactInfo {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .contactInfo .contactDetails {
+    margin: 0 auto;
+    padding-top: 5%;
+  }
+  .contactInfo form {
+    padding: 2% 4%;
+    position: absolute;
+    right: 6.5%;
+    top: 40%;
+  }
+  .contactInfo input[type=text],
+.contactInfo input[type=email] {
+    width: 344px;
+  }
+  .contactInfo textarea[type=message] {
+    width: 720px;
+  }
+  .contactInfo input[type=submit] {
+    width: 720px;
+  }
+  .contactInfo input:invalid,
+.contactInfo textarea:invalid {
+    border-bottom: 5px solid #08FDED;
+  }
+  .contactInfo .formBox {
+    width: 800px;
+    height: 416px;
+    background-color: #08FDED;
+    position: absolute;
+    right: 4%;
+    top: 37.5%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .contactInfo {
+    height: 100vh;
+  }
+  .contactInfo .contactDetails {
+    margin: 0 auto;
+    padding-top: 5%;
+  }
+  .contactInfo form {
+    padding: 2% 4%;
+    position: absolute;
+    right: 2.5%;
+    top: 37.5%;
+  }
+  .contactInfo .top-row {
+    flex-direction: column;
+  }
+  .contactInfo input[type=text],
+.contactInfo input[type=email] {
+    width: 344px;
+    padding-top: 5%;
+  }
+  .contactInfo textarea[type=message] {
+    width: 360px;
+  }
+  .contactInfo input[type=submit] {
+    width: 360px;
+  }
+  .contactInfo input:invalid,
+.contactInfo textarea:invalid {
+    border-bottom: 5px solid #08FDED;
+  }
+  .contactInfo .formBox {
+    width: 400px;
+    height: 416px;
+    background-color: #08FDED;
+    position: absolute;
+    right: 3.5%;
+    top: 36.5%;
+  }
+}
 
 .blogPost {
   background: #03697C;
@@ -1038,6 +1146,10 @@ footer {
 }
 .blogPost .mission .missionInfo li {
   line-height: 3.5rem;
+}
+.blogPost .mission .missionInfo a:hover,
+.blogPost .mission .missionInfo a:focus {
+  color: #08FDED;
 }
 .blogPost .mission .missionInfo ul li::before {
   content: "•";
@@ -1179,6 +1291,168 @@ footer {
 .blogPost .comments input:invalid,
 .blogPost .comments textarea:invalid {
   border-bottom: 5px solid #08FDED;
+}
+@media screen and (max-width: 900px) {
+  .blogPost .blogContainer {
+    height: 300vh;
+    flex-direction: column;
+  }
+  .blogPost .mission {
+    width: 100%;
+  }
+  .blogPost .mission .missionHeader {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  .blogPost .mission .missionInfo {
+    width: 50%;
+    top: 13%;
+    left: 30%;
+  }
+  .blogPost .mission img {
+    top: 1%;
+    left: 20%;
+  }
+  .blogPost .activities {
+    width: 100%;
+  }
+  .blogPost .activities .blogBox,
+.blogPost .activities img {
+    width: 689.5px;
+    height: 409.5px;
+  }
+  .blogPost .activities .blogBox {
+    background-color: #08FDED;
+    position: absolute;
+    right: 2%;
+    top: 40%;
+  }
+  .blogPost .activities img {
+    position: absolute;
+    right: 0;
+    top: 41%;
+  }
+  .blogPost .activities .activitiesPost {
+    position: absolute;
+    top: 43%;
+    border-bottom: none;
+    border-left: none;
+  }
+  .blogPost .comments {
+    height: 150vh;
+  }
+  .blogPost .comments h3 {
+    margin-left: 10%;
+  }
+  .blogPost .comments .mariama,
+.blogPost .comments .rob {
+    margin-left: 10%;
+    margin-right: 5%;
+  }
+  .blogPost .comments form {
+    padding: 0;
+    right: 10%;
+    bottom: 10%;
+  }
+  .blogPost .comments input[type=text],
+.blogPost .comments input[type=email] {
+    width: 344px;
+  }
+  .blogPost .comments textarea[type=message] {
+    width: 720px;
+  }
+  .blogPost .comments input[type=submit] {
+    width: 720px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .blogPost .blogContainer {
+    height: 260vh;
+    flex-direction: column;
+  }
+  .blogPost .mission {
+    width: 90%;
+  }
+  .blogPost .mission .missionHeader {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  .blogPost .mission .missionInfo {
+    width: 80%;
+    top: 13%;
+    left: 10%;
+  }
+  .blogPost .mission img {
+    width: 350px;
+    height: 350px;
+    top: 1%;
+    left: 9%;
+  }
+  .blogPost .mission p,
+.blogPost .mission a {
+    font-size: 1.8rem;
+  }
+  .blogPost .activities {
+    width: 90%;
+  }
+  .blogPost .activities .blogBox,
+.blogPost .activities img {
+    width: 394px;
+    height: 234px;
+  }
+  .blogPost .activities .blogBox {
+    top: 39.5%;
+  }
+  .blogPost .activities img {
+    top: 39.75%;
+  }
+  .blogPost .activities .activitiesPost {
+    top: 42.5%;
+  }
+  .blogPost .activities .activitiesPost h3 {
+    font-size: 3rem;
+  }
+  .blogPost .activities .activitiesPost p {
+    font-size: 1.4rem;
+  }
+  .blogPost .comments {
+    height: 170vh;
+  }
+  .blogPost .comments h3 {
+    margin-left: 10%;
+  }
+  .blogPost .comments .mariama,
+.blogPost .comments .rob {
+    margin-left: 5%;
+    margin-right: 7.5%;
+  }
+  .blogPost .comments .mariama {
+    top: 5%;
+  }
+  .blogPost .comments .rob {
+    top: 35%;
+  }
+  .blogPost .comments form {
+    padding: 0;
+    right: 8%;
+    bottom: 2%;
+  }
+  .blogPost .comments .top-row {
+    flex-direction: column;
+  }
+  .blogPost .comments input[type=text],
+.blogPost .comments input[type=email] {
+    width: 344px;
+  }
+  .blogPost .comments input[type=email] {
+    padding-top: 10%;
+  }
+  .blogPost .comments textarea[type=message] {
+    width: 360px;
+  }
+  .blogPost .comments input[type=submit] {
+    width: 360px;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

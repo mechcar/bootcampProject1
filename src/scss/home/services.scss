@@ -171,7 +171,7 @@
     }
 
     @media screen and (max-width: $small) {
-        height: 120vh;
+        height: 110vh;
         flex-direction: column;
 
         .leftSide,
@@ -210,7 +210,7 @@
         
         .locations {
             width: 90%;
-            top: 12.5%;
+            top: 15%;
         }
         
         .programs {
@@ -229,7 +229,15 @@
         }
 
         a {
-            width: 60%;
+            width: 90%;
+        }
+
+        h3 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.4rem;
         }
     }
     

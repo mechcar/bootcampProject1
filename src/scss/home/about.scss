@@ -82,11 +82,11 @@
             margin-bottom: 5%;
         }
     }
-
+    
     @media screen and (max-width: $small) {
-        height: 175vh;
+        height: 160vh;
         flex-direction: column;
-
+    
         .aboutContainer {
             display: flex;
             flex-direction: column;
@@ -99,9 +99,9 @@
             width: 90%;
             margin: 5%;
         }
-
+        
         .newSpace {
-            margin-top: 22.5%;
+            margin-top: 12.5%;
         }
 
         h3,

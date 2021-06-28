@@ -37,6 +37,11 @@
                 line-height: 3.5rem;
             }
 
+            a:hover,
+            a:focus {
+                color: $aqua;
+            }
+
             ul li::before {
                 content: "\2022";
                 color: $aqua;
@@ -207,16 +212,220 @@
         }
     }
 
-    
-    @media screen and (max-width: $large) {
-        
-    }
 
     @media screen and (max-width: $medium) {
+        .blogContainer {
+            height: 300vh;
+            flex-direction: column;
+        }
+                
+        .mission {
+            width: 100%;
+            
+            .missionHeader {
+                font-size: 3rem;
+                font-weight: 400;
+            }
+            
+            .missionInfo {
+                width: 50%;
+                top: 13%;
+                left: 30%;
+            }
+    
+            
+            img {
+                top: 1%;
+                left: 20%;
+            }
+        }
+    
         
+        
+        .activities {
+            width: 100%;
+            
+            .blogBox,
+            img {
+                width: 985px * 0.7;
+                height: 585px * 0.7;
+            }
+            
+            .blogBox {
+                background-color: $aqua;
+                position: absolute;
+                right: 2%;
+                top: 40%;
+            }
+            
+            img {
+                position: absolute;
+                right: 0;
+                top: 41%;
+            }
+            
+            .activitiesPost {
+                position: absolute;
+                top: 43%;
+                border-bottom: none;
+                border-left: none;
+            }
+        }
+        
+        .comments {
+            height: 150vh;
+    
+            h3 {
+                margin-left: 10%;
+            }
+    
+            .mariama,
+            .rob {
+                margin-left: 10%;
+                margin-right: 5%;
+    
+            }
+
+            form {
+                padding: 0;
+                right: 10%;
+                bottom: 10%;
+            }
+            
+            input[type='text'],
+            input[type='email'] {
+                width: 430px * 0.8;
+            }
+            
+            
+            textarea[type='message'] {
+                width: 900px * 0.8;
+            }
+            
+            input[type="submit"] {
+                width: 900px * 0.8;
+            }
+            
+        }
+    }
+    
+    @media screen and (max-width: $small) {
+        .blogContainer {
+            height: 260vh;
+            flex-direction: column;
+        }
+                
+        .mission {
+            width: 90%;
+            
+            .missionHeader {
+                font-size: 3rem;
+                font-weight: 400;
+            }
+            
+            .missionInfo {
+                width: 80%;
+                top: 13%;
+                left: 10%;
+            }
+    
+            
+            img {
+                width: 500px * 0.7;
+                height: 500px * 0.7;
+                top: 1%;
+                left: 9%;
+            }
+
+            p,
+            a {
+                font-size: 1.8rem;
+            }
+        }
+    
+        
+        
+        .activities {
+            width: 90%;
+            
+            .blogBox,
+            img {
+                width: 985px * 0.4;
+                height: 585px * 0.4;
+            }
+            
+            .blogBox {
+                top: 39.5%;
+            }
+            
+            img {
+
+                top: 39.75%;
+            }
+            
+            .activitiesPost {
+                top: 42.5%;
+
+                h3 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        
+        .comments {
+            height: 170vh;
+    
+            h3 {
+                margin-left: 10%;
+            }
+    
+            .mariama,
+            .rob {
+                margin-left: 5%;
+                margin-right: 7.5%;
+            }
+            
+            .mariama {
+                top: 5%;
+            }
+
+            .rob {
+                top: 35%;
+            }
+
+
+            form {
+                padding: 0;
+                right: 8%;
+                bottom: 2%;
+            }
+
+            .top-row {
+                flex-direction: column;
+            }
+            
+            input[type='text'],
+            input[type='email'] {
+                width: 430px * 0.8;
+            }
+            
+            input[type='email'] {
+                padding-top: 10%;
+            }
+            
+            textarea[type='message'] {
+                width: 900px * 0.4;
+            }
+            
+            input[type="submit"] {
+                width: 900px * 0.4;
+            }
+            
+        }
     }
 
-    @media screen and (max-width: $small) {
-        
-    }
 }

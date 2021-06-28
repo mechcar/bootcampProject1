@@ -4,7 +4,7 @@ $grey: #F3FAFF;
 $aqua: #08FDED;
 $turquoise: #03697C;
 
-$small: 375px;
+$small: 425px;
 $medium: 900px;
 $large: 1480px;
 
@@ -53,7 +53,8 @@ a {
     font-family: "Roboto", sans-serif;
     text-decoration: none;
     color: white;
-    font-size: 2.5rem;    
+    font-size: 2.5rem;
+    padding: 1% 2%;    
 }
 
 p, li {
