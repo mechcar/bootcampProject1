@@ -180,5 +180,9 @@ header {
     @media screen and (max-width: $small) {
         height: 30vh;
         background-size: 100% 100%;
+
+        h1 {
+            margin-top: 5%;
+        }
     }
 }
