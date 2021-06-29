@@ -29,23 +29,9 @@
     }
 
     p {
-        font-size: 2rem;
         line-height: 2.8rem;
         letter-spacing: 0.1rem;
         margin: 3.25% 0;
-    }
-
-    a {
-        font-size: 3rem;
-        font-family: "Walter Turncoat", cursive;
-        background: $aqua;
-        color: $blue;
-    }
-
-    a:hover,
-    a:focus {
-        background: $grey;
-        color: $blue;
     }
 
     @media screen and (max-width: $medium) {
@@ -66,7 +52,6 @@
         }
     
         p {
-            font-size: 1.4rem;
             margin-top: 7%;
             margin-bottom: 5%;
         }
@@ -75,26 +60,28 @@
     @media screen and (max-width: $small) {
         height: 140vh;
         flex-direction: column;
-        text-align: center;
+
+        h3 {
+            text-align: center;
+        }
 
         .eventsBox {
-            left: 9%;
+            left: 16.5%;
             top: 5%;
         }
     
         img {
             top: 4%;
-            left: 12%;
+            left: 18.5%;
         }
     
         .eventsContainer {
-            width: 90%;
+            width: 75%;
             top: 40%;
-            left: 7%;
+            left: 12.5%;
         }
     
         p {
-            font-size: 1.4rem;
             margin-top: 7%;
             margin-bottom: 10%;
         }

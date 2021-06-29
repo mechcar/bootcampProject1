@@ -67,7 +67,6 @@
     }
 
     p {
-        font-size: 2rem;
         width: 80%;
         margin: 0;
     }
@@ -84,7 +83,7 @@
     }
     
     @media screen and (max-width: $small) {
-        height: 225vh;
+        height: 230vh;
         flex-direction: column;
     
         .aboutContainer {
@@ -96,12 +95,17 @@
         .blog,
         .community,
         .getInTouch {
-            width: 90%;
-            margin: 5%;
+            width: 95%;
+            margin: 7.5%;
+        }
+
+        h3::before {
+            margin-right: 5%;
+            margin-bottom: 2.5%;
         }
         
         .newSpace {
-            margin-top: 12.5%;
+            margin-top: 10%;
         }
 
         h3,
@@ -110,7 +114,7 @@
         }
 
         p {
-            font-size: 1.4rem;
+            margin-bottom: 0;
         }
     }
 

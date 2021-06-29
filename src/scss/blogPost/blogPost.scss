@@ -75,7 +75,7 @@
         .blogBox {
             background-color: $aqua;
             position: absolute;
-            right: 2%;
+            right: 1.8%;
             top: -9%;
         }
         
@@ -123,15 +123,17 @@
                 width: 100px;
                 height: 100px;
                 margin-right: 5%;
+                margin-bottom: 4.4%;
             }
         }
-
+        
         .mariama {
             top: 5%;
+            margin-top: 1%;
         }
 
         .rob {
-            top: 25%;
+            top: 28%;
         }
 
         .comment {
@@ -215,7 +217,7 @@
 
     @media screen and (max-width: $medium) {
         .blogContainer {
-            height: 300vh;
+            height: 290vh;
             flex-direction: column;
         }
                 
@@ -255,18 +257,18 @@
                 background-color: $aqua;
                 position: absolute;
                 right: 2%;
-                top: 40%;
+                top: 42.25%;
             }
             
             img {
                 position: absolute;
                 right: 0;
-                top: 41%;
+                top: 43%;
             }
             
             .activitiesPost {
                 position: absolute;
-                top: 43%;
+                top: 45%;
                 border-bottom: none;
                 border-left: none;
             }
@@ -283,7 +285,10 @@
             .rob {
                 margin-left: 10%;
                 margin-right: 5%;
-    
+            }
+
+            .mariama img {
+                margin-bottom: 9%;
             }
 
             form {
@@ -375,10 +380,10 @@
         }
         
         .comments {
-            height: 240vh;
+            height: 210vh;
     
             h3 {
-                margin-left: 10%;
+                margin-left: 5%;
             }
     
             .mariama,
@@ -389,10 +394,18 @@
             
             .mariama {
                 top: 5%;
+
+                img {
+                    margin-bottom: 46%;
+                }
             }
 
             .rob {
                 top: 35%;
+
+                img {
+                    margin-bottom: 38%;
+                }
             }
 
 

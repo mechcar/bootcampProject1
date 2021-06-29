@@ -7,23 +7,9 @@
     justify-content: center;
 
     p {
-        font-size: 2rem;
         line-height: 2.8rem;
         letter-spacing: 0.1rem;
         width: 60%;
-    }
-
-    a {
-        font-size: 3rem;
-        font-family: "Walter Turncoat", cursive;
-        background: $aqua;
-        color: $blue;
-    }
-
-    a:hover,
-    a:focus {
-        background: $grey;
-        color: $blue;
     }
 
     @media screen and (max-width: $medium) {
@@ -37,16 +23,12 @@
     }
 
     @media screen and (max-width: $small) {
-        height: 100vh;
+        height: 90vh;
 
         p {
-            font-size: 1.6rem;
             margin-bottom: 10%;
         }
 
-        a {
-            width: 90%;
-        }
     }
 }
 

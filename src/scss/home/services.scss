@@ -32,22 +32,7 @@
         font-family: "Walter Turncoat", cursive;
     }
     
-    a {
-        background: $aqua;
-        color: $blue;
-        width: 25%;
-        display: flex;
-        justify-content: center;
-        padding: 0.5% 1%;
-    }
-    
-    a:hover,
-    a:focus {
-        background: $grey;
-    }
-    
     p {
-        font-size: 2rem;
         width: 85%;
     }
 
@@ -230,10 +215,6 @@
 
         a {
             width: 90%;
-        }
-
-        h3 {
-            font-size: 3rem;
         }
 
         p {

@@ -16,24 +16,44 @@ body {
     color: white;
     position: relative;
     overflow-x: hidden;
+    position: relative;
 }
 
 .skipLink {
-    position: 'absolute';
+    position: absolute;
     display: flex;
     justify-content: center;
-    width: 12%;
-    left: -1000px;
-    top: 5px;
-    z-index: 999;
+    width: 15%;
+
+    transform: translateY(-1000px);
     color: white;
+    
     font-size: 2rem;
     font-family: 'Roboto', cursive;
     border: 0.4rem solid #e85b26;
 }
 
+.mainSkip {
+    left: 3%;
+    top: 4%;
+}
+
+.blogSkip {
+    left: 11%;
+    top: 0.7%;
+}
+
+.contactSkip {
+    left: 11%;
+    top: 3%;
+}
+
 .skipLink:focus {   
-    left: 1%;
+    transform: translateY(0px);
+}
+
+.skipLinkVisibility {
+    display: flex;
 }
 
 .wrapper {
@@ -66,7 +86,8 @@ h1,
 h2,
 h3,
 button,
-input[type="submit"] {
+input[type="submit"],
+.button {
     font-family: 'Walter Turncoat', cursive;
     margin: 0;
 }
@@ -83,5 +104,53 @@ input[type="submit"] {
 h3 {
     font-size: 4.5rem;
 }
+
+.button {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    font-size: 3rem;
+    background: $aqua;
+    color: $blue;
+}
+
+.button:hover,
+.button:focus {
+    background: $grey;
+    color: $blue;
+}
+
+@media screen and (max-width: $medium) {
+    p {
+        font-size: 1.8rem;
+    }
+
+    .skipLink {
+        width: 25%;
+    }
+    
+    .blogSkip {
+        left: 3%;
+        top: 1%;
+    }
+    
+    .contactSkip {
+        left: 2.7%;
+    }
+}
+
+@media screen and (max-width: $small) {
+    p {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 3.5rem;
+    }
+
+    .skipLinkVisibility {
+        display: none;
+    }
+} 
 
 

@@ -7,24 +7,42 @@ body {
   color: white;
   position: relative;
   overflow-x: hidden;
+  position: relative;
 }
 
 .skipLink {
-  position: "absolute";
+  position: absolute;
   display: flex;
   justify-content: center;
-  width: 12%;
-  left: -1000px;
-  top: 5px;
-  z-index: 999;
+  width: 15%;
+  transform: translateY(-1000px);
   color: white;
   font-size: 2rem;
   font-family: "Roboto", cursive;
   border: 0.4rem solid #e85b26;
 }
 
+.mainSkip {
+  left: 3%;
+  top: 4%;
+}
+
+.blogSkip {
+  left: 11%;
+  top: 0.7%;
+}
+
+.contactSkip {
+  left: 11%;
+  top: 3%;
+}
+
 .skipLink:focus {
-  left: 1%;
+  transform: translateY(0px);
+}
+
+.skipLinkVisibility {
+  display: flex;
 }
 
 .wrapper {
@@ -57,7 +75,8 @@ h1,
 h2,
 h3,
 button,
-input[type=submit] {
+input[type=submit],
+.button {
   font-family: "Walter Turncoat", cursive;
   margin: 0;
 }
@@ -75,6 +94,52 @@ h3 {
   font-size: 4.5rem;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  font-size: 3rem;
+  background: #08FDED;
+  color: #474BB5;
+}
+
+.button:hover,
+.button:focus {
+  background: #F3FAFF;
+  color: #474BB5;
+}
+
+@media screen and (max-width: 900px) {
+  p {
+    font-size: 1.8rem;
+  }
+
+  .skipLink {
+    width: 25%;
+  }
+
+  .blogSkip {
+    left: 3%;
+    top: 1%;
+  }
+
+  .contactSkip {
+    left: 2.7%;
+  }
+}
+@media screen and (max-width: 425px) {
+  p {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 3.5rem;
+  }
+
+  .skipLinkVisibility {
+    display: none;
+  }
+}
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -334,12 +399,20 @@ header a {
   position: relative;
   padding: 0;
 }
-header nav a:hover::after,
-header nav a:focus::after {
+header .currentLocation::after {
   content: "";
   width: 100%;
   height: 10%;
   background-color: #08FDED;
+  position: absolute;
+  bottom: -5px;
+}
+header .link:hover::after,
+header .link:focus::after {
+  content: "";
+  width: 100%;
+  height: 10%;
+  background-color: #F3FAFF;
   position: absolute;
   bottom: -5px;
 }
@@ -354,6 +427,9 @@ header h1 {
   }
 }
 @media screen and (max-width: 425px) {
+  header .skipLinkVisibility {
+    display: none;
+  }
   header nav {
     padding-top: 15%;
     width: 90%;
@@ -368,13 +444,10 @@ header h1 {
     font-size: 2rem;
     padding-bottom: 20%;
   }
-  header nav a:hover::after,
-header nav a:focus::after {
-    content: "";
-    width: 100%;
+  header .currentLocation::after,
+header .link:hover::after,
+header .link:focus::after {
     height: 5%;
-    background-color: #08FDED;
-    position: absolute;
     bottom: 35%;
   }
   header .mainH1,
@@ -421,14 +494,12 @@ header .contactH1 {
   }
   .mainHeader .mainH1 {
     font-size: 8rem;
-    margin: 5%;
+    margin-top: 15%;
+    margin-left: 2.5%;
     line-height: 7.5rem;
   }
   .mainHeader img {
     display: none;
-  }
-  .mainHeader .hidden {
-    display: flex;
   }
 }
 
@@ -532,7 +603,6 @@ header .contactH1 {
   left: 0;
 }
 .about p {
-  font-size: 2rem;
   width: 80%;
   margin: 0;
 }
@@ -547,7 +617,7 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .about {
-    height: 225vh;
+    height: 230vh;
     flex-direction: column;
   }
   .about .aboutContainer {
@@ -558,18 +628,22 @@ header .contactH1 {
 .about .blog,
 .about .community,
 .about .getInTouch {
-    width: 90%;
-    margin: 5%;
+    width: 95%;
+    margin: 7.5%;
+  }
+  .about h3::before {
+    margin-right: 5%;
+    margin-bottom: 2.5%;
   }
   .about .newSpace {
-    margin-top: 12.5%;
+    margin-top: 10%;
   }
   .about h3,
 .about a {
     font-size: 3rem;
   }
   .about p {
-    font-size: 1.4rem;
+    margin-bottom: 0;
   }
 }
 
@@ -601,21 +675,9 @@ header .contactH1 {
   right: 8%;
 }
 .events p {
-  font-size: 2rem;
   line-height: 2.8rem;
   letter-spacing: 0.1rem;
   margin: 3.25% 0;
-}
-.events a {
-  font-size: 3rem;
-  font-family: "Walter Turncoat", cursive;
-  background: #08FDED;
-  color: #474BB5;
-}
-.events a:hover,
-.events a:focus {
-  background: #F3FAFF;
-  color: #474BB5;
 }
 @media screen and (max-width: 900px) {
   .events .eventsBox,
@@ -631,7 +693,6 @@ header .contactH1 {
     width: 50%;
   }
   .events p {
-    font-size: 1.4rem;
     margin-top: 7%;
     margin-bottom: 5%;
   }
@@ -640,23 +701,24 @@ header .contactH1 {
   .events {
     height: 140vh;
     flex-direction: column;
+  }
+  .events h3 {
     text-align: center;
   }
   .events .eventsBox {
-    left: 9%;
+    left: 16.5%;
     top: 5%;
   }
   .events img {
     top: 4%;
-    left: 12%;
+    left: 18.5%;
   }
   .events .eventsContainer {
-    width: 90%;
+    width: 75%;
     top: 40%;
-    left: 7%;
+    left: 12.5%;
   }
   .events p {
-    font-size: 1.4rem;
     margin-top: 7%;
     margin-bottom: 10%;
   }
@@ -695,21 +757,9 @@ header .contactH1 {
   justify-content: center;
 }
 .roadTrip p {
-  font-size: 2rem;
   line-height: 2.8rem;
   letter-spacing: 0.1rem;
   width: 60%;
-}
-.roadTrip a {
-  font-size: 3rem;
-  font-family: "Walter Turncoat", cursive;
-  background: #08FDED;
-  color: #474BB5;
-}
-.roadTrip a:hover,
-.roadTrip a:focus {
-  background: #F3FAFF;
-  color: #474BB5;
 }
 @media screen and (max-width: 900px) {
   .roadTrip {
@@ -723,14 +773,10 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .roadTrip {
-    height: 100vh;
+    height: 90vh;
   }
   .roadTrip p {
-    font-size: 1.6rem;
     margin-bottom: 10%;
-  }
-  .roadTrip a {
-    width: 90%;
   }
 }
 
@@ -775,20 +821,7 @@ header .contactH1 {
   margin: 0;
   font-family: "Walter Turncoat", cursive;
 }
-.services a {
-  background: #08FDED;
-  color: #474BB5;
-  width: 25%;
-  display: flex;
-  justify-content: center;
-  padding: 0.5% 1%;
-}
-.services a:hover,
-.services a:focus {
-  background: #F3FAFF;
-}
 .services p {
-  font-size: 2rem;
   width: 85%;
 }
 .services .leftBox,
@@ -939,9 +972,6 @@ header .contactH1 {
   }
   .services a {
     width: 90%;
-  }
-  .services h3 {
-    font-size: 3rem;
   }
   .services p {
     font-size: 1.4rem;
@@ -1186,7 +1216,7 @@ footer {
 .blogPost .activities .blogBox {
   background-color: #08FDED;
   position: absolute;
-  right: 2%;
+  right: 1.8%;
   top: -9%;
 }
 .blogPost .activities img {
@@ -1229,12 +1259,14 @@ footer {
   width: 100px;
   height: 100px;
   margin-right: 5%;
+  margin-bottom: 4.4%;
 }
 .blogPost .comments .mariama {
   top: 5%;
+  margin-top: 1%;
 }
 .blogPost .comments .rob {
-  top: 25%;
+  top: 28%;
 }
 .blogPost .comments .comment {
   font-weight: bold;
@@ -1304,7 +1336,7 @@ footer {
 }
 @media screen and (max-width: 900px) {
   .blogPost .blogContainer {
-    height: 300vh;
+    height: 290vh;
     flex-direction: column;
   }
   .blogPost .mission {
@@ -1335,16 +1367,16 @@ footer {
     background-color: #08FDED;
     position: absolute;
     right: 2%;
-    top: 40%;
+    top: 42.25%;
   }
   .blogPost .activities img {
     position: absolute;
     right: 0;
-    top: 41%;
+    top: 43%;
   }
   .blogPost .activities .activitiesPost {
     position: absolute;
-    top: 43%;
+    top: 45%;
     border-bottom: none;
     border-left: none;
   }
@@ -1358,6 +1390,9 @@ footer {
 .blogPost .comments .rob {
     margin-left: 10%;
     margin-right: 5%;
+  }
+  .blogPost .comments .mariama img {
+    margin-bottom: 9%;
   }
   .blogPost .comments form {
     padding: 0;
@@ -1426,10 +1461,10 @@ footer {
     font-size: 1.4rem;
   }
   .blogPost .comments {
-    height: 240vh;
+    height: 210vh;
   }
   .blogPost .comments h3 {
-    margin-left: 10%;
+    margin-left: 5%;
   }
   .blogPost .comments .mariama,
 .blogPost .comments .rob {
@@ -1439,8 +1474,14 @@ footer {
   .blogPost .comments .mariama {
     top: 5%;
   }
+  .blogPost .comments .mariama img {
+    margin-bottom: 46%;
+  }
   .blogPost .comments .rob {
     top: 35%;
+  }
+  .blogPost .comments .rob img {
+    margin-bottom: 38%;
   }
   .blogPost .comments form {
     padding: 0;
