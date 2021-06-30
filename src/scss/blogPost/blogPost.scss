@@ -415,7 +415,7 @@
     
     @media screen and (max-width: $small) {
         .blogContainer {
-            height: 380vh;
+            height: 410vh;
             flex-direction: column;
         }
                 
@@ -510,7 +510,7 @@
 
             form {
                 padding: 0;
-                right: 8%;
+                right: 11%;
                 bottom: 2%;
             }
 
@@ -520,7 +520,7 @@
             
             input[type='text'],
             input[type='email'] {
-                width: 430px * 0.8;
+                width: 430px * 0.7;
             }
             
             input[type='email'] {
@@ -528,11 +528,11 @@
             }
             
             textarea[type='message'] {
-                width: 900px * 0.4;
+                width: 900px * 0.35;
             }
             
             input[type="submit"] {
-                width: 900px * 0.4;
+                width: 900px * 0.35;
             }
             
         }

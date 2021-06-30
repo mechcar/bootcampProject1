@@ -533,8 +533,7 @@ header .contactH1 {
     height: 60vh;
   }
   .mainHeader .mainH1 {
-    font-size: 8rem;
-    margin-top: 15%;
+    margin-top: 20%;
     margin-left: 2.5%;
     line-height: 7.5rem;
   }
@@ -560,8 +559,8 @@ header .contactH1 {
     height: 50vh;
   }
   .contactHeader h1 {
-    width: 80%;
-    margin-top: 5%;
+    width: 90%;
+    margin-top: 10%;
   }
 }
 
@@ -709,7 +708,7 @@ header .contactH1 {
 .about .community,
 .about .getInTouch {
     width: 95%;
-    margin: 0 auto 12.5% auto;
+    margin: 0 2.5% 12.5% 10%;
   }
   .about h3::before {
     margin-left: -2.5%;
@@ -796,7 +795,7 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .events {
-    height: 140vh;
+    height: 150vh;
     flex-direction: column;
   }
   .events h3 {
@@ -901,7 +900,7 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .roadTrip {
-    height: 90vh;
+    height: 100vh;
   }
   .roadTrip p {
     margin-bottom: 10%;
@@ -1110,7 +1109,7 @@ header .contactH1 {
 }
 @media screen and (max-width: 425px) {
   .services {
-    height: 155vh;
+    height: 170vh;
     flex-direction: column;
   }
   .services .leftSide,
@@ -1349,12 +1348,12 @@ footer {
   }
   .contactInfo .contactDetails {
     margin: 0 auto;
-    padding-top: 5%;
+    padding-top: 10%;
   }
   .contactInfo form {
     padding: 2% 4%;
     position: absolute;
-    right: 2.5%;
+    right: 8%;
     top: 37.5%;
   }
   .contactInfo .top-row {
@@ -1362,25 +1361,25 @@ footer {
   }
   .contactInfo input[type=text],
 .contactInfo input[type=email] {
-    width: 344px;
+    width: 301px;
     padding-top: 5%;
   }
   .contactInfo textarea[type=message] {
-    width: 360px;
+    width: 315px;
   }
   .contactInfo input[type=submit] {
-    width: 360px;
+    width: 315px;
   }
   .contactInfo input:invalid,
 .contactInfo textarea:invalid {
     border-bottom: 5px solid #08FDED;
   }
   .contactInfo .formBox {
-    width: 400px;
-    height: 416px;
+    width: 350px;
+    height: 364px;
     background-color: #08FDED;
     position: absolute;
-    right: 2.5%;
+    right: 11%;
     top: 36.5%;
   }
 }
@@ -1718,7 +1717,7 @@ footer {
 }
 @media screen and (max-width: 425px) {
   .blogPost .blogContainer {
-    height: 380vh;
+    height: 410vh;
     flex-direction: column;
   }
   .blogPost .mission {
@@ -1791,7 +1790,7 @@ footer {
   }
   .blogPost .comments form {
     padding: 0;
-    right: 8%;
+    right: 11%;
     bottom: 2%;
   }
   .blogPost .comments .top-row {
@@ -1799,16 +1798,16 @@ footer {
   }
   .blogPost .comments input[type=text],
 .blogPost .comments input[type=email] {
-    width: 344px;
+    width: 301px;
   }
   .blogPost .comments input[type=email] {
     padding-top: 10%;
   }
   .blogPost .comments textarea[type=message] {
-    width: 360px;
+    width: 315px;
   }
   .blogPost .comments input[type=submit] {
-    width: 360px;
+    width: 315px;
   }
 }
 
