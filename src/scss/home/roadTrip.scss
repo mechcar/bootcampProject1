@@ -11,15 +11,35 @@
         letter-spacing: 0.1rem;
         width: 60%;
     }
+    
+    .button {
+        width: 50%;
+    }
+
+    @media screen and (max-width: $XL) {
+        p {
+            width: 90%;
+            margin: 2% 0;
+        }
+        
+        .button {
+            width: 50%;
+    }
+    }
 
     @media screen and (max-width: $medium) {
-        height: 80vh;
+        height: 70vh;
         text-align: center;
 
         p {
             width: 90%;
             margin-bottom: 5%;
         }
+
+        .button {
+            width: 90%;
+        }
+
     }
 
     @media screen and (max-width: $small) {

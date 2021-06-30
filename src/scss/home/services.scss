@@ -16,7 +16,6 @@
     }
     
     .leftSide {
-        width: 45%;
         margin-right: auto;
     }
 
@@ -28,8 +27,6 @@
     
     a {
         display: flex;
-        margin: 0;
-        font-family: "Walter Turncoat", cursive;
     }
     
     p {
@@ -68,7 +65,6 @@
     
     .programs {
         padding: 10% 0;
-        
         position: absolute;
     }
     
@@ -83,13 +79,97 @@
         right: 0;
     }
 
-    @media screen and (max-width: $large) {
+    @media screen and (max-width: $XL) {
+        height: 90vh;
         
+        .leftSide,
+        .rightSide {
+            
+            img {
+                width: 670px * 1.125;
+                height: 419px * 1.125;
+            }
+        }
+
+        .leftSide {
+            margin-right: auto;
+        }
+
+        
+        .rightSide {
+            width: 47.5%;
+            margin-left: auto;
+        }
+        
+        
+        p {
+            width: 90%;
+        }
+
+        .leftBox,
+        .rightBox {
+            width: 670px * 1.125;
+            height: 419px * 1.125;
+        }
+
+        .locations {
+            width: 46%;
+        }
+        
+        .programs {
+            width: 50%;
+            padding: 10% 0;
+            margin-right: 0; 
+        }
     }
 
+    @media screen and (max-width: $large) {
+        height: 90vh;
+        
+        .leftSide,
+        .rightSide {
+            
+            img {
+                width: 670px * 0.85;
+                height: 419px * 0.85;
+            }
+        }
+        
+        .leftSide {
+            width: 38%;
+        }
+
+        
+        .rightSide {
+            width: 38%;
+            margin-right: 7.5%;
+        }
+        
+        
+        p {
+            width: 90%;
+        }
+
+        .leftBox,
+        .rightBox {
+            width: 670px * 0.85;
+            height: 419px * 0.85;
+        }
+
+        
+        .locations {
+            width: 46%;
+        }
+        
+        .programs {
+            width: 50%;
+            padding: 5% 0;
+            margin-right: 0; 
+        }
+    }
+    
     @media screen and (max-width: $medium) {
-        height: 150vh;
-        flex-direction: column;
+        height: 130vh;
 
         .leftSide,
         .rightSide {
@@ -103,13 +183,12 @@
         }
     
         .leftSide {
-            width: 100%;
+            width: 1%;
             margin-right: 0;
         }
 
         
         .rightSide {
-            width: 100%;
             margin-left: 0;
         }
 
@@ -132,7 +211,7 @@
         .locations {
             align-items: center;
             width: 100%;
-            top: 25%;
+            top: 22.5%;
         }
         
         .programs {
@@ -140,7 +219,7 @@
             flex-direction: column;
             align-items: center;
             width: 100%;
-            top: 50%;
+            top: 47.5%;
         }
         
         .rightBox {

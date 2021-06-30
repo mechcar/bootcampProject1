@@ -10,16 +10,32 @@
         height: 450px;
     }
 
-    @media screen and (max-width: $medium) {
+    @media screen and (max-width: $large) {
+        height: 50vh;
+        
         img {
-            width: 450px * 0.6;
-            height: 450px * 0.6;
+            width: 450px * 0.7;
+            height: 450px * 0.7;
+        }
+    }
+
+    @media screen and (max-width: $medium) {
+        flex-direction: column;
+        height: 120vh;
+        
+        img {
+            width: 450px * 0.8;
+            height: 450px * 0.8;
         }
     }
 
     @media screen and (max-width: $small) {
         height: 150vh;
-        flex-direction: column;
+
+        img {
+            width: 450px * 0.6;
+            height: 450px * 0.6;
+        }
     }
 
 }

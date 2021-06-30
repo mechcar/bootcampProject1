@@ -214,10 +214,111 @@
         }
     }
 
+    @media screen and (max-width: $XL) {
+
+        .activities {
+            width: 60%;
+            
+            .blogBox,
+            img {
+                width: 985px * 1;
+                height: 585px * 1;
+            }
+            
+            .blogBox {
+                right: 1.35%;
+            }
+            
+            img {
+                top: -10.5%;
+            }
+        }
+        
+        .comments {    
+            .mariama img {
+                margin-bottom: 8%;
+            }
+    
+            .rob img {
+                margin-bottom: 5%;
+            }
+        }
+    }
+
+    @media screen and (max-width: $large) {
+        .blogContainer {
+            height: 190vh;
+        }
+            .mission {
+            .missionInfo {
+                width: 27.5%;
+    
+                li {
+                    line-height: 3.5rem;
+                }
+            }
+    
+            
+            img {
+                height: 500px * 0.7;
+                width: 500px * 0.7;
+                top: 8%;
+            }
+        }  
+        
+        .activities {
+            
+            .blogBox,
+            img {
+                width: 985px * 0.75;
+                height: 585px * 0.75;
+            }
+            
+            .blogBox {
+                right: 2.3%;
+                top: -9%;
+            }
+            
+            img {
+                position: absolute;
+                right: 0;
+                top: -7.5%;
+            }
+        }
+        
+        .comments {
+            height: 150vh;
+    
+            .mariama,
+            .rob {
+                margin-left: 10%;
+            }
+            
+            .mariama {
+                top: 5%;
+                margin-top: 1%;
+            }
+    
+            .rob {
+                top: 28%;
+
+                img {
+                    margin-bottom: 2%;
+                }
+            }
+    
+            
+            form {
+                right: 10%;
+                bottom: 10%;
+            }
+        }
+    }
+
 
     @media screen and (max-width: $medium) {
         .blogContainer {
-            height: 290vh;
+            height: 250vh;
             flex-direction: column;
         }
                 
@@ -231,19 +332,17 @@
             
             .missionInfo {
                 width: 50%;
-                top: 13%;
-                left: 30%;
+                top: 14%;
+                left: 28%;
             }
     
             
             img {
-                top: 1%;
+                top: 1.5%;
                 left: 20%;
             }
         }
-    
-        
-        
+
         .activities {
             width: 100%;
             
@@ -257,7 +356,7 @@
                 background-color: $aqua;
                 position: absolute;
                 right: 2%;
-                top: 42.25%;
+                top: 42.5%;
             }
             
             img {
@@ -275,7 +374,7 @@
         }
         
         .comments {
-            height: 150vh;
+            height: 120vh;
     
             h3 {
                 margin-left: 10%;
@@ -285,15 +384,15 @@
             .rob {
                 margin-left: 10%;
                 margin-right: 5%;
-            }
 
-            .mariama img {
-                margin-bottom: 9%;
+                img {
+                    margin-bottom: 10%;
+                }
             }
 
             form {
                 padding: 0;
-                right: 10%;
+                right: 3.5%;
                 bottom: 10%;
             }
             

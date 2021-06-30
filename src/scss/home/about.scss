@@ -24,7 +24,10 @@
     }
 
     h3::before {
-        margin-left: -9.5%;
+        margin-left: -12.5%;
+        margin-right: 2.5%;
+        height: 80px;
+        width: 80px;
     }
 
     .newSpace h3::before {
@@ -47,12 +50,13 @@
     h3 {
         display: flex;
         margin: 0;
-        font-size: 4.5rem;
         font-family: "Walter Turncoat", cursive;
     }
 
     a {
+        font-size: 4.5rem;
         position: relative;
+        padding: 0;
     }
 
     a:hover::after,
@@ -68,22 +72,57 @@
 
     p {
         width: 80%;
-        margin: 0;
+        margin: 0 0 10% 0;
+    }
+
+    @media screen and (max-width: $XL) {
+        height: 90vh;
+
+        .aboutContainer {
+            margin: 5% 15% 0 15%;
+        }
+    
+        h3::before {
+            margin-left: -14%;
+            margin-right: 2.5%;
+        }
+    }
+
+    @media screen and (max-width: $large) {
+        height: 120vh;
+
+        .aboutContainer {
+            margin: 0 10% 0 15%;
+        }
+    
+        h3::before {
+            margin-left: -18%;
+            margin-right: 2.5%;
+        }
     }
 
     @media screen and (max-width: $medium) {
         .aboutContainer {
-            grid-template-columns: 50% 50%;
-            margin-left: 10%;
+            grid-template-columns: 60% 60%;
+            margin: 0 10% 0 15%;
+        }
+
+        a {
+            font-size: 3.5rem;
         }
 
         p {
-            margin-bottom: 5%;
+            margin-bottom: 12.5%;
+        }
+    
+        h3::before {
+            margin-left: -27.5%;
+            margin-right: 2.5%;
         }
     }
     
     @media screen and (max-width: $small) {
-        height: 230vh;
+        height: 220vh;
         flex-direction: column;
     
         .aboutContainer {
@@ -96,12 +135,12 @@
         .community,
         .getInTouch {
             width: 95%;
-            margin: 7.5%;
+            margin: 0 auto 12.5% auto;
         }
 
         h3::before {
-            margin-right: 5%;
-            margin-bottom: 2.5%;
+            margin-left: -2.5%;
+            margin-right: 2.5%;
         }
         
         .newSpace {
@@ -112,6 +151,7 @@
         a {
             font-size: 3rem;
         }
+
 
         p {
             margin-bottom: 0;

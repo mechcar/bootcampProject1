@@ -97,7 +97,7 @@ h3 {
 .button {
   display: flex;
   justify-content: center;
-  width: 90%;
+  width: 85%;
   font-size: 3rem;
   background: #08FDED;
   color: #474BB5;
@@ -109,9 +109,38 @@ h3 {
   color: #474BB5;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1680px) {
+  .mainSkip {
+    left: 2.4%;
+  }
+
+  .blogSkip {
+    left: 6%;
+    top: 1%;
+  }
+
+  .contactSkip {
+    top: 1.5%;
+    left: 2.5%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .blogSkip {
+    left: 2.6%;
+    top: 0.7%;
+  }
+
+  .contactSkip {
+    left: 2.7%;
+  }
+}
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 3.5rem;
+  }
+
   p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .skipLink {
@@ -124,16 +153,13 @@ h3 {
   }
 
   .contactSkip {
+    top: 1.5%;
     left: 2.7%;
   }
 }
 @media screen and (max-width: 425px) {
   p {
     font-size: 1.4rem;
-  }
-
-  h3 {
-    font-size: 3.5rem;
   }
 
   .skipLinkVisibility {
@@ -420,7 +446,12 @@ header h1 {
   font-size: 14.25rem;
   font-weight: 400;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1680px) {
+  header nav {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
   header nav {
     padding-top: 10%;
     width: 50%;
@@ -471,14 +502,23 @@ header .contactH1 {
   position: absolute;
   right: 0;
   bottom: -40%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 .mainHeader .hidden {
   display: none;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1280px) {
+  .mainHeader img {
+    width: 40%;
+    height: 60%;
+    bottom: 10%;
+    margin-bottom: -10%;
+  }
+}
+@media screen and (max-width: 768px) {
   .mainHeader {
-    height: 100vh;
+    height: 60vh;
+    background-size: 100% 100%;
   }
   .mainHeader img {
     width: 50%;
@@ -510,7 +550,7 @@ header .contactH1 {
 .contactHeader h1 {
   margin-top: 6%;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   .contactHeader h1 {
     margin-top: 10%;
   }
@@ -529,9 +569,14 @@ header .contactH1 {
   background-image: url(/blog-header.738885c1.jpg);
   height: 70vh;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1680px) {
   .blogHeader {
-    height: 65vh;
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blogHeader {
+    height: 50vh;
     background-size: 100% 100%;
   }
 }
@@ -568,7 +613,10 @@ header .contactH1 {
   align-items: center;
 }
 .about h3::before {
-  margin-left: -9.5%;
+  margin-left: -12.5%;
+  margin-right: 2.5%;
+  height: 80px;
+  width: 80px;
 }
 .about .newSpace h3::before {
   content: url(/home.7e06cdf2.png);
@@ -586,11 +634,12 @@ header .contactH1 {
 .about h3 {
   display: flex;
   margin: 0;
-  font-size: 4.5rem;
   font-family: "Walter Turncoat", cursive;
 }
 .about a {
+  font-size: 4.5rem;
   position: relative;
+  padding: 0;
 }
 .about a:hover::after,
 .about a:focus::after {
@@ -604,20 +653,51 @@ header .contactH1 {
 }
 .about p {
   width: 80%;
-  margin: 0;
+  margin: 0 0 10% 0;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1680px) {
+  .about {
+    height: 90vh;
+  }
   .about .aboutContainer {
-    grid-template-columns: 50% 50%;
-    margin-left: 10%;
+    margin: 5% 15% 0 15%;
+  }
+  .about h3::before {
+    margin-left: -14%;
+    margin-right: 2.5%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .about {
+    height: 120vh;
+  }
+  .about .aboutContainer {
+    margin: 0 10% 0 15%;
+  }
+  .about h3::before {
+    margin-left: -18%;
+    margin-right: 2.5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about .aboutContainer {
+    grid-template-columns: 60% 60%;
+    margin: 0 10% 0 15%;
+  }
+  .about a {
+    font-size: 3.5rem;
   }
   .about p {
-    margin-bottom: 5%;
+    margin-bottom: 12.5%;
+  }
+  .about h3::before {
+    margin-left: -27.5%;
+    margin-right: 2.5%;
   }
 }
 @media screen and (max-width: 425px) {
   .about {
-    height: 230vh;
+    height: 220vh;
     flex-direction: column;
   }
   .about .aboutContainer {
@@ -629,11 +709,11 @@ header .contactH1 {
 .about .community,
 .about .getInTouch {
     width: 95%;
-    margin: 7.5%;
+    margin: 0 auto 12.5% auto;
   }
   .about h3::before {
-    margin-right: 5%;
-    margin-bottom: 2.5%;
+    margin-left: -2.5%;
+    margin-right: 2.5%;
   }
   .about .newSpace {
     margin-top: 10%;
@@ -679,7 +759,15 @@ header .contactH1 {
   letter-spacing: 0.1rem;
   margin: 3.25% 0;
 }
-@media screen and (max-width: 900px) {
+.events .button {
+  width: 50%;
+}
+@media screen and (max-width: 1680px) {
+  .events .eventsBox {
+    bottom: 26%;
+  }
+}
+@media screen and (max-width: 1280px) {
   .events .eventsBox,
 .events img {
     width: 270px;
@@ -687,14 +775,23 @@ header .contactH1 {
   }
   .events .eventsBox {
     left: 7%;
-    bottom: 24%;
+    bottom: 27%;
   }
   .events .eventsContainer {
-    width: 50%;
+    width: 60%;
+    margin-right: -2.5%;
   }
   .events p {
     margin-top: 7%;
     margin-bottom: 5%;
+  }
+  .events .button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .events .eventsContainer {
+    width: 45%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -735,16 +832,32 @@ header .contactH1 {
   width: 450px;
   height: 450px;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1280px) {
+  .gallery {
+    height: 50vh;
+  }
   .gallery img {
-    width: 270px;
-    height: 270px;
+    width: 315px;
+    height: 315px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    height: 120vh;
+  }
+  .gallery img {
+    width: 360px;
+    height: 360px;
   }
 }
 @media screen and (max-width: 425px) {
   .gallery {
     height: 150vh;
-    flex-direction: column;
+  }
+  .gallery img {
+    width: 270px;
+    height: 270px;
   }
 }
 
@@ -761,14 +874,29 @@ header .contactH1 {
   letter-spacing: 0.1rem;
   width: 60%;
 }
-@media screen and (max-width: 900px) {
+.roadTrip .button {
+  width: 50%;
+}
+@media screen and (max-width: 1680px) {
+  .roadTrip p {
+    width: 90%;
+    margin: 2% 0;
+  }
+  .roadTrip .button {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
   .roadTrip {
-    height: 80vh;
+    height: 70vh;
     text-align: center;
   }
   .roadTrip p {
     width: 90%;
     margin-bottom: 5%;
+  }
+  .roadTrip .button {
+    width: 90%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -809,7 +937,6 @@ header .contactH1 {
   height: 523.75px;
 }
 .services .leftSide {
-  width: 45%;
   margin-right: auto;
 }
 .services .rightSide {
@@ -818,8 +945,6 @@ header .contactH1 {
 }
 .services a {
   display: flex;
-  margin: 0;
-  font-family: "Walter Turncoat", cursive;
 }
 .services p {
   width: 85%;
@@ -861,10 +986,75 @@ header .contactH1 {
   bottom: -7.5%;
   right: 0;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1680px) {
   .services {
-    height: 150vh;
-    flex-direction: column;
+    height: 90vh;
+  }
+  .services .leftSide img,
+.services .rightSide img {
+    width: 753.75px;
+    height: 471.375px;
+  }
+  .services .leftSide {
+    margin-right: auto;
+  }
+  .services .rightSide {
+    width: 47.5%;
+    margin-left: auto;
+  }
+  .services p {
+    width: 90%;
+  }
+  .services .leftBox,
+.services .rightBox {
+    width: 753.75px;
+    height: 471.375px;
+  }
+  .services .locations {
+    width: 46%;
+  }
+  .services .programs {
+    width: 50%;
+    padding: 10% 0;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .services {
+    height: 90vh;
+  }
+  .services .leftSide img,
+.services .rightSide img {
+    width: 569.5px;
+    height: 356.15px;
+  }
+  .services .leftSide {
+    width: 38%;
+  }
+  .services .rightSide {
+    width: 38%;
+    margin-right: 7.5%;
+  }
+  .services p {
+    width: 90%;
+  }
+  .services .leftBox,
+.services .rightBox {
+    width: 569.5px;
+    height: 356.15px;
+  }
+  .services .locations {
+    width: 46%;
+  }
+  .services .programs {
+    width: 50%;
+    padding: 5% 0;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .services {
+    height: 130vh;
   }
   .services .leftSide,
 .services .rightSide {
@@ -877,11 +1067,10 @@ header .contactH1 {
     height: 419px;
   }
   .services .leftSide {
-    width: 100%;
+    width: 1%;
     margin-right: 0;
   }
   .services .rightSide {
-    width: 100%;
     margin-left: 0;
   }
   .services .leftBox,
@@ -900,14 +1089,14 @@ header .contactH1 {
   .services .locations {
     align-items: center;
     width: 100%;
-    top: 25%;
+    top: 22.5%;
   }
   .services .programs {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    top: 50%;
+    top: 47.5%;
   }
   .services .rightBox {
     bottom: -10%;
@@ -1073,42 +1262,85 @@ footer {
   right: 4%;
   top: -25%;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1680px) {
+  .contactInfo {
+    height: 45vh;
+  }
+  .contactInfo .contactDetails {
+    margin: auto 7.5%;
+  }
+  .contactInfo form {
+    right: 5%;
+    top: -30%;
+  }
+  .contactInfo input[type=text],
+.contactInfo input[type=email] {
+    width: 387px;
+  }
+  .contactInfo textarea[type=message] {
+    width: 810px;
+  }
+  .contactInfo input[type=submit] {
+    width: 810px;
+  }
+  .contactInfo .formBox {
+    width: 900px;
+    height: 494px;
+  }
+}
+@media screen and (max-width: 1280px) {
   .contactInfo {
     flex-direction: column;
-    height: 100vh;
+    height: 120vh;
   }
   .contactInfo .contactDetails {
     margin: 0 auto;
-    padding-top: 5%;
+    padding-top: 3.5%;
   }
   .contactInfo form {
-    padding: 2% 4%;
-    position: absolute;
-    right: 6.5%;
+    right: 12%;
+    top: 37%;
+  }
+  .contactInfo input[type=text],
+.contactInfo input[type=email] {
+    width: 387px;
+  }
+  .contactInfo textarea[type=message] {
+    width: 810px;
+  }
+  .contactInfo input[type=submit] {
+    width: 810px;
+  }
+  .contactInfo .formBox {
+    width: 900px;
+    height: 468px;
+    right: 14%;
+    top: 35.5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contactInfo {
+    height: 100vh;
+  }
+  .contactInfo form {
+    right: 3.5%;
     top: 40%;
   }
   .contactInfo input[type=text],
 .contactInfo input[type=email] {
-    width: 344px;
+    width: 301px;
   }
   .contactInfo textarea[type=message] {
-    width: 720px;
+    width: 630px;
   }
   .contactInfo input[type=submit] {
-    width: 720px;
-  }
-  .contactInfo input:invalid,
-.contactInfo textarea:invalid {
-    border-bottom: 5px solid #08FDED;
+    width: 630px;
   }
   .contactInfo .formBox {
-    width: 800px;
-    height: 416px;
-    background-color: #08FDED;
-    position: absolute;
-    right: 4%;
-    top: 37.5%;
+    width: 700px;
+    height: 364px;
+    right: 3.7%;
+    top: 39%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -1334,9 +1566,82 @@ footer {
 .blogPost .comments textarea:invalid {
   border-bottom: 5px solid #08FDED;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1680px) {
+  .blogPost .activities {
+    width: 60%;
+  }
+  .blogPost .activities .blogBox,
+.blogPost .activities img {
+    width: 985px;
+    height: 585px;
+  }
+  .blogPost .activities .blogBox {
+    right: 1.35%;
+  }
+  .blogPost .activities img {
+    top: -10.5%;
+  }
+  .blogPost .comments .mariama img {
+    margin-bottom: 8%;
+  }
+  .blogPost .comments .rob img {
+    margin-bottom: 5%;
+  }
+}
+@media screen and (max-width: 1280px) {
   .blogPost .blogContainer {
-    height: 290vh;
+    height: 190vh;
+  }
+  .blogPost .mission .missionInfo {
+    width: 27.5%;
+  }
+  .blogPost .mission .missionInfo li {
+    line-height: 3.5rem;
+  }
+  .blogPost .mission img {
+    height: 350px;
+    width: 350px;
+    top: 8%;
+  }
+  .blogPost .activities .blogBox,
+.blogPost .activities img {
+    width: 738.75px;
+    height: 438.75px;
+  }
+  .blogPost .activities .blogBox {
+    right: 2.3%;
+    top: -9%;
+  }
+  .blogPost .activities img {
+    position: absolute;
+    right: 0;
+    top: -7.5%;
+  }
+  .blogPost .comments {
+    height: 150vh;
+  }
+  .blogPost .comments .mariama,
+.blogPost .comments .rob {
+    margin-left: 10%;
+  }
+  .blogPost .comments .mariama {
+    top: 5%;
+    margin-top: 1%;
+  }
+  .blogPost .comments .rob {
+    top: 28%;
+  }
+  .blogPost .comments .rob img {
+    margin-bottom: 2%;
+  }
+  .blogPost .comments form {
+    right: 10%;
+    bottom: 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blogPost .blogContainer {
+    height: 250vh;
     flex-direction: column;
   }
   .blogPost .mission {
@@ -1348,11 +1653,11 @@ footer {
   }
   .blogPost .mission .missionInfo {
     width: 50%;
-    top: 13%;
-    left: 30%;
+    top: 14%;
+    left: 28%;
   }
   .blogPost .mission img {
-    top: 1%;
+    top: 1.5%;
     left: 20%;
   }
   .blogPost .activities {
@@ -1367,7 +1672,7 @@ footer {
     background-color: #08FDED;
     position: absolute;
     right: 2%;
-    top: 42.25%;
+    top: 42.5%;
   }
   .blogPost .activities img {
     position: absolute;
@@ -1381,7 +1686,7 @@ footer {
     border-left: none;
   }
   .blogPost .comments {
-    height: 150vh;
+    height: 120vh;
   }
   .blogPost .comments h3 {
     margin-left: 10%;
@@ -1391,12 +1696,13 @@ footer {
     margin-left: 10%;
     margin-right: 5%;
   }
-  .blogPost .comments .mariama img {
-    margin-bottom: 9%;
+  .blogPost .comments .mariama img,
+.blogPost .comments .rob img {
+    margin-bottom: 10%;
   }
   .blogPost .comments form {
     padding: 0;
-    right: 10%;
+    right: 3.5%;
     bottom: 10%;
   }
   .blogPost .comments input[type=text],
