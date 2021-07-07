@@ -1,246 +1,269 @@
 .contactInfo {
-    background: $turquoise;
-    display: flex;
-    position: relative;
-    height: 50vh;
+	background: $turquoise;
+	display: flex;
+	position: relative;
+	height: 50vh;
 
-    .contactDetails {
-        margin: auto 0 auto 12%;
-        font-size: 2rem;
+	.contactDetails {
+		margin: auto 0 auto 12%;
+		font-size: 2rem;
 
-        p {
-            margin: 0;
-            line-height: 2.8rem;
-        }
+		p {
+			margin: 0;
+			line-height: 2.8rem;
+		}
 
-        :nth-child(3){
-            margin-top: 2rem;
-        }
-    }
+		:nth-child(3) {
+			margin-top: 2rem;
+		}
+	}
 
-    form,
-    input,
-    textarea {
-        color: $grey;
-        font-size: 2rem;
-        background: $blue;
-    }
-    
-    form,
-    input {
-        border: none;
-        border-bottom: 1px solid $grey;
-    }
+	.listPrompt {
+		position: absolute;
+		left: 5%;
+		bottom: 0;
+	}
 
-    form {
-        padding: 2% 4%;
-        position: absolute;
-        right: 5%;
-        top: -30%;
-    }
+	.listPrompt:hover,
+    .listPrompt:focus{
+		color: $darkBlue;
+	}
 
-    .top-row {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 5%;
-    }
+	form,
+	input,
+	textarea {
+		color: $grey;
+		font-size: 2rem;
+		background: $blue;
+	}
 
-    input[type='text'],
-    input[type='email'] {
-        width: 430px;
-        padding-bottom: 3.5%;
-        padding-left: 5%;
-    }
+	form,
+	input {
+		border: none;
+		border-bottom: 1px solid $grey;
+	}
 
-    input[type='text']:hover,
-    input[type='text']:focus,
-    input[type='email']:hover,
-    input[type='email']:focus,
-    textarea[type='message']:hover,
-    textarea[type='message']:focus {
-        border-bottom: 5px solid white;
-    }
+	form {
+		padding: 2% 4%;
+		position: absolute;
+		right: 5%;
+		top: -30%;
+	}
 
-    textarea[type='message'] {
-        width: 900px;
-        padding-top: 2.5%;
-        padding-left: 2.5%;
-        resize: none;
-    }
-    
-    input[type="submit"] {
-        margin-top: 40px;
-        display: flex;
-        justify-content: center;
-        width: 900px;
-        background: $aqua;
-        color: $darkBlue;
-        padding: 10px 50px;
-    }
-    
-    input[type="submit"]:hover,
-    input[type="submit"]:focus {
-        background-color: white;
-        color: $blue;
-    }
-    
-    input:invalid,
-    textarea:invalid {
-        border-bottom: 5px solid $aqua;
-    }
+	.top-row {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 5%;
+	}
 
-    .formBox {
-        width: 1000px;
-        height: 520px;
-        background-color: $aqua;
-        position: absolute;
-        right: 4%;
-        top: -25%
-    }
+	input[type="text"],
+	input[type="email"] {
+		width: 430px;
+		padding-bottom: 3.5%;
+		padding-left: 5%;
+	}
 
-    @media screen and (max-width: $XL) {
-        height: 45vh;
+	input[type="text"]:hover,
+	input[type="text"]:focus,
+	input[type="email"]:hover,
+	input[type="email"]:focus,
+	textarea[type="message"]:hover,
+	textarea[type="message"]:focus {
+		border-bottom: 5px solid white;
+	}
 
-        .contactDetails {
-            margin: auto 7.5%;
-        }
+	textarea[type="message"] {
+		width: 900px;
+		padding-top: 2.5%;
+		padding-left: 2.5%;
+		resize: none;
+	}
 
-        form {
-            right: 5%;
-            top: -30%;
-        }
-    
-        input[type='text'],
-        input[type='email'] {
-            width: 430px * 0.9;
-        }
-    
-        textarea[type='message'] {
-            width: 900px * 0.9;
-        }
-        
-        input[type="submit"] {
-            width: 900px * 0.9;
-        }
+	input[type="submit"] {
+		margin-top: 40px;
+		display: flex;
+		justify-content: center;
+		width: 900px;
+		background: $aqua;
+		color: $darkBlue;
+		padding: 10px 50px;
+	}
 
-        .formBox {
-            width: 1000px * 0.9;
-            height: 520px * 0.95;
-        }
-    }
+	input[type="submit"]:hover,
+	input[type="submit"]:focus {
+		background-color: white;
+		color: $blue;
+	}
 
-    @media screen and (max-width: $large) {
-        flex-direction: column;
-        height: 120vh;
-        
-        .contactDetails {
-            margin: 0 auto;
-            padding-top: 3.5%;
-        }
+	input:invalid,
+	textarea:invalid {
+		border-bottom: 5px solid $aqua;
+	}
 
-        form {
-            right: 12%;
-            top: 37%;
-        }
+	.formBox {
+		width: 1000px;
+		height: 520px;
+		background-color: $aqua;
+		position: absolute;
+		right: 4%;
+		top: -25%;
+	}
 
-        input[type='text'],
-        input[type='email'] {
-            width: 430px * 0.9;
-        }
+	@media screen and (max-width: $XL) {
+		height: 45vh;
 
-        textarea[type='message'] {
-            width: 900px * 0.9;
-        }
-        
-        input[type="submit"] {
-            width: 900px * 0.9;
-        }
+		.contactDetails {
+			margin: auto 7.5%;
+		}
 
-        .formBox {
-            width: 1000px * 0.9;
-            height: 520px * 0.9;
-            right: 14%;
-            top: 35.5%;
-        }
-        
-    }
+		form {
+			right: 5%;
+			top: -30%;
+		}
 
-    @media screen and (max-width: $medium) {
-        height: 100vh;
+		input[type="text"],
+		input[type="email"] {
+			width: 430px * 0.9;
+		}
 
-        form {
-            right: 3.5%;
-            top: 40%;
-        }
+		textarea[type="message"] {
+			width: 900px * 0.9;
+		}
 
-        input[type='text'],
-        input[type='email'] {
-            width: 430px * 0.7;
-        }
+		input[type="submit"] {
+			width: 900px * 0.9;
+		}
 
-        textarea[type='message'] {
-            width: 900px * 0.7;
-        }
-        
-        input[type="submit"] {
-            width: 900px * 0.7;
-        }
+		.formBox {
+			width: 1000px * 0.9;
+			height: 520px * 0.95;
+		}
+	}
 
-        .formBox {
-            width: 1000px * 0.7;
-            height: 520px * 0.7;
-            right: 3.7%;
-            top: 39%
-        }
+	@media screen and (max-width: $large) {
+		flex-direction: column;
+		height: 120vh;
 
-    }
+        .listPrompt {
+			left: 37%;
+			top: 31%;
+		}
 
-    @media screen and (max-width: $small) {
-        height: 140vh;
+		.contactDetails {
+			margin: 0 auto;
+			padding-top: 3.5%;
+		}
 
-        .contactDetails {
-            margin: 0 auto;
-            padding-top: 10%;
-        }
+		form {
+			right: 12%;
+			top: 40%;
+		}
 
-        form {
-            padding: 2% 4%;
-            position: absolute;
-            right: 8%;
-            top: 37.5%;
-        }
+		input[type="text"],
+		input[type="email"] {
+			width: 430px * 0.9;
+		}
 
-        .top-row {
-            flex-direction: column;
-        }
+		textarea[type="message"] {
+			width: 900px * 0.9;
+		}
 
-        input[type='text'],
-        input[type='email'] {
-            width: 430px * 0.7;
-            padding-top: 5%;
-        }
+		input[type="submit"] {
+			width: 900px * 0.9;
+		}
 
-        textarea[type='message'] {
-            width: 900px * 0.35;
-        }
-        
-        input[type="submit"] {
-            width: 900px * 0.35;
-        }
-        
-        input:invalid,
-        textarea:invalid {
-            border-bottom: 5px solid $aqua;
-        }
+		.formBox {
+			width: 1000px * 0.9;
+			height: 520px * 0.9;
+			right: 14%;
+			top: 38.5%;
+		}
+	}
 
-        .formBox {
-            width: 1000px * 0.35;
-            height: 520px * 0.7;
-            background-color: $aqua;
-            position: absolute;
-            right: 11%;
-            top: 36.5%
-        }
-    }
+	@media screen and (max-width: $medium) {
+		height: 100vh;
 
+        .listPrompt {
+			left: 27.5%;
+			top: 30%;
+		}
+
+		form {
+			right: 3.5%;
+			top: 40%;
+		}
+
+		input[type="text"],
+		input[type="email"] {
+			width: 430px * 0.7;
+		}
+
+		textarea[type="message"] {
+			width: 900px * 0.7;
+		}
+
+		input[type="submit"] {
+			width: 900px * 0.7;
+		}
+
+		.formBox {
+			width: 1000px * 0.7;
+			height: 520px * 0.7;
+			right: 3.7%;
+			top: 39%;
+		}
+	}
+
+	@media screen and (max-width: $small) {
+		height: 140vh;
+
+		.contactDetails {
+			margin: 0 auto;
+			padding-top: 5%;
+		}
+
+		.listPrompt {
+			left: 10%;
+			top: 32.5%;
+		}
+
+		form {
+			padding: 2% 4%;
+			position: absolute;
+			right: 8%;
+			top: 42.5%;
+		}
+
+		.top-row {
+			flex-direction: column;
+		}
+
+		input[type="text"],
+		input[type="email"] {
+			width: 430px * 0.7;
+			padding-top: 5%;
+		}
+
+		textarea[type="message"] {
+			width: 900px * 0.35;
+		}
+
+		input[type="submit"] {
+			width: 900px * 0.35;
+		}
+
+		input:invalid,
+		textarea:invalid {
+			border-bottom: 5px solid $aqua;
+		}
+
+		.formBox {
+			width: 1000px * 0.35;
+			height: 520px * 0.7;
+			background-color: $aqua;
+			position: absolute;
+			right: 11%;
+			top: 41.5%;
+		}
+	}
 }

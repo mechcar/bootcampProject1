@@ -1192,6 +1192,15 @@ footer {
 .contactInfo .contactDetails :nth-child(3) {
   margin-top: 2rem;
 }
+.contactInfo .listPrompt {
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+}
+.contactInfo .listPrompt:hover,
+.contactInfo .listPrompt:focus {
+  color: #044779;
+}
 .contactInfo form,
 .contactInfo input,
 .contactInfo textarea {
@@ -1292,13 +1301,17 @@ footer {
     flex-direction: column;
     height: 120vh;
   }
+  .contactInfo .listPrompt {
+    left: 37%;
+    top: 31%;
+  }
   .contactInfo .contactDetails {
     margin: 0 auto;
     padding-top: 3.5%;
   }
   .contactInfo form {
     right: 12%;
-    top: 37%;
+    top: 40%;
   }
   .contactInfo input[type=text],
 .contactInfo input[type=email] {
@@ -1314,12 +1327,16 @@ footer {
     width: 900px;
     height: 468px;
     right: 14%;
-    top: 35.5%;
+    top: 38.5%;
   }
 }
 @media screen and (max-width: 768px) {
   .contactInfo {
     height: 100vh;
+  }
+  .contactInfo .listPrompt {
+    left: 27.5%;
+    top: 30%;
   }
   .contactInfo form {
     right: 3.5%;
@@ -1348,13 +1365,17 @@ footer {
   }
   .contactInfo .contactDetails {
     margin: 0 auto;
-    padding-top: 10%;
+    padding-top: 5%;
+  }
+  .contactInfo .listPrompt {
+    left: 10%;
+    top: 32.5%;
   }
   .contactInfo form {
     padding: 2% 4%;
     position: absolute;
     right: 8%;
-    top: 37.5%;
+    top: 42.5%;
   }
   .contactInfo .top-row {
     flex-direction: column;
@@ -1380,7 +1401,7 @@ footer {
     background-color: #08FDED;
     position: absolute;
     right: 11%;
-    top: 36.5%;
+    top: 41.5%;
   }
 }
 
